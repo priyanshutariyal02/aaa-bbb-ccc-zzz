@@ -17,7 +17,7 @@ const Navbar = ({ logo }) => {
 
     return (
         <header className='bg-black flex justify-between items-center sm:px-16 px-8 py-4 max-w-[115rem] mx-auto absolute top-0 bg-transparent z-10 right-0 left-0'>
-            <NavLink to="/home">
+            <NavLink to="/">
                 <img src={logo} alt="logo" className='w-[233px] h-[60px] object-cover rounded-lg shadow-md home-logo' />
             </NavLink>
 
