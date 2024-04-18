@@ -75,8 +75,11 @@ header .nav-btn {
         background: #222123;
         transition: 0.7s ease;
         transform: translateY(-100vh);
+        
     }
-
+    .nav-close-btn{
+        
+    }
     header .responsive_nav {
         transform: none;
     }
