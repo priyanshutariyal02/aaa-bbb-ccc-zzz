@@ -1,17 +1,20 @@
-import React from 'react'
+
+import React, { useRef, useState } from 'react'
 import HomeImg from '../components/HomeImg';
 import transfer from '../assets/icons/transfer.png'
 import resortImg from '../assets/resort1.avif'
 import { bed, bath, food, bedroom, location } from "../assets/icons/icon.js";
-import Footer from '../components/Footer.jsx';
 
 const Home = () => {
-    const inputs = "border border-black w-[15rem] h-[3rem] px-3 outline-none rounded-lg"
+    const inputs = "border border-black w-[15rem] h-[3rem] px-3 outline-none rounded-lg";
+
+
     return (
         <>
             <div className="bg-slate-300/20 flex flex-col justify-center items-center">
                 <HomeImg />
-                <div className="w-[70%] h-[auto] bg-white my-10 shadow-xl rounded-xl flex flex-col gap-10 justify-center items-center py-6 hotel-rev" >
+                <form className="w-[70%] h-[auto] bg-white my-10 shadow-xl rounded-xl flex flex-col gap-10 justify-center items-center py-6 hotel-rev" >
+
                     <div className='flex gap-20 items-center check-in-out'>
                         <div>
                             <p className='text-black p-2 font-bold'>Check in</p>
@@ -22,25 +25,31 @@ const Home = () => {
 
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Check out</p>
-                            <input type="date" name="checkin" id="checkin" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
+                            <input
+                                type="date"
+                                name="checkin"
+                                id="checkin"
+                            
+                                className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
                         </div>
                     </div>
 
                     <div className='flex gap-20 gusts'>
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Rooms</p>
-                            <input type="number" name="rooms" id="" className={inputs} placeholder='number of rooms' />
+                            <input type="number" name="rooms" id="rooms" className={inputs} placeholder='number of rooms' />
                         </div>
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Adults</p>
-                            <input type="number" name="adults" id="" className={inputs} placeholder='number of adults' />
+                            <input type="number" name="adults" id="adults" className={inputs} placeholder='number of adults' />
                         </div>
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Children</p>
-                            <input type="number" name="children" id="" className={inputs} placeholder='number of children' />
+                            <input type="number" name="children" id="children" className={inputs} placeholder='number of children' />
                         </div>
                     </div>
-                </div>
+                    <button type="submit" className='bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-400 transition duration-200'>Book</button>
+                </form>
 
                 <div className='w-full h-[auto] my-8'>
                     <div className='flex flex-col justify-center items-center'>

@@ -176,4 +176,11 @@ footer{
         line-height: 1rem;
     }
 
+
+    /* About */
+
+    .about-section{
+        flex-direction: column;
+        
+    }
 }
