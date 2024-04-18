@@ -40,7 +40,7 @@ const Blog = () => {
 
   return (
     <>
-      <div className="bg-gray-100 py-20 md:py-32">
+      <div className="min-h-[100vh] bg-gray-100 py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {isAuthorized ? (
             <div>
@@ -93,10 +93,6 @@ const Blog = () => {
           )}
         </div>
       </div>
-      <div className='mt-[4rem]'>
-
-      </div>
-      <Footer />
     </>
   );
 };

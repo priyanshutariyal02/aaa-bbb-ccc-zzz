@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const Contact = () => {
   return (
     <>
-      <div className='max-w-3xl h-screen mx-auto sm:p-16 pb-10 !pt-[10rem] px-8'>
+      <div className='max-w-3xl min-h-[100vh] mx-auto sm:p-16 pb-10 !pt-[10rem] px-8'>
         <div className='flex justify-start'>
           <h1 className='font-[600] text-[3rem] '>Get in Touch</h1>
         </div>
@@ -42,8 +42,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Footer />
-
     </>
   )
 }

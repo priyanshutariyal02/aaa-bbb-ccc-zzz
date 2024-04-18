@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 const Gallery = () => {
     return (
-        <div className='w-full h-screen pt-[10rem]'>
+        <div className='w-full min-h-[100vh] pt-[10rem]'>
             <div className='flex flex-col justify-center items-center'>
 
                 <h1 className='font-bold text-[4.5rem] text-center'>Our Gallery</h1>
@@ -25,9 +25,6 @@ const Gallery = () => {
                         <a href={resort1}><img src={resort1} alt="" className='transition duration-300 ease-in-out hover:scale-110' /></a>
                     </div>
                 </div>
-            </div>
-            <div className='lg:mt-32'>
-                <Footer />
             </div>
         </div>
     )

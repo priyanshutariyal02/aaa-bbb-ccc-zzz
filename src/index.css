@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+.main-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .input {
     margin-top: .625rem;
     display: block;
@@ -53,6 +59,10 @@ header .nav-btn {
     outline: none;
     visibility: hidden;
     opacity: 0;
+}
+
+footer{
+    margin-top: auto;
 }
 
 @media only screen and (max-width: 768px) {
