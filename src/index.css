@@ -77,9 +77,10 @@ header .nav-btn {
         transform: translateY(-100vh);
     }
 
-    header .responsive_nav{
+    header .responsive_nav {
         transform: none;
     }
+
     .md-device {
         flex-direction: column;
         gap: 3rem;
@@ -95,10 +96,12 @@ header .nav-btn {
         flex-direction: column;
         gap: 1.5rem;
     }
-    .nav-mobile a{
+
+    .nav-mobile a {
         width: 7rem;
         height: 3.5rem;
     }
+
     .home-heading {
         font-size: 2rem;
     }
@@ -145,4 +148,19 @@ header .nav-btn {
     footer {
         font-size: 11px;
     }
+
+
+
+
+    /* gallery */
+    .gallery-img{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-para {
+        font-size: 11px;
+        padding: 0 30px;
+        line-height: 1rem;
+    }
+
 }

@@ -6,7 +6,6 @@ import logo from "../public/logo.png"
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
-import Footer from "./components/Footer";
 function App() {
   return (
     <main className="h-screen bg-slate-300/20">
@@ -20,7 +19,6 @@ function App() {
           <Route path="/blog" element={<Blog />} />
         </Routes>
       </Router>
-      <Footer />
     </main>
   );
 }
