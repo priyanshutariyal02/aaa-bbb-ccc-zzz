@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const Contact = () => {
   return (
     <>
-      <div className='max-w-3xl h-full mx-auto sm:p-16 pb-10 !pt-[10rem] px-8 min-h-[calc(100vh-80px)'>
+      <div className='max-w-3xl h-screen mx-auto sm:p-16 pb-10 !pt-[10rem] px-8'>
         <div className='flex justify-start'>
           <h1 className='font-[600] text-[3rem] '>Get in Touch</h1>
         </div>
@@ -39,11 +39,11 @@ const Contact = () => {
               />
             </label>
             <button type="submit" className='text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center'>Submit</button>
-
           </form>
         </div>
       </div>
       <Footer />
+
     </>
   )
 }

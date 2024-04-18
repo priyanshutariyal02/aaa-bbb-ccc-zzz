@@ -134,6 +134,118 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                {/* // Why choose us Section */}
+                <div className="w-full h-[auto] my-8">
+                    <div className="flex flex-col justify-center items-center">
+                        <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
+                            <span className="text-gray-800">Why</span> <span className="text-[#ffae00]">Choose Us?</span>
+                        </h1>
+                        <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-700 px-4 md:px-0">
+                            Experience the ultimate in luxury and comfort at our resort, where exceptional service and stunning natural
+                            surroundings come together to create an unforgettable getaway.
+                        </p>
+                    </div>
+                    <div className="flex flex-col justify-center items-center my-11 gap-10 md:flex-row md:justify-center md:items-center md-device">
+                        <div className="bg-white shadow-xl rounded-lg card w-[22rem] md:w-[25rem] h-[20rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105">
+                            <h2 className="text-[1.7rem] md:text-[29px] font-bold mb-4">
+                                <span className="text-gray-800">Unparalleled</span> <span className="text-[#ffae00]">Amenities</span>
+                            </h2>
+                            <p className="text-lg font-[400] px-4 text-center text-gray-700">
+                                Indulge in our world-class amenities, from our luxurious spa to our state-of-the-art fitness center, ensuring
+                                your stay is nothing short of exceptional.
+                            </p>
+                        </div>
+                        <div className="bg-white shadow-xl rounded-lg card w-[22rem] md:w-[25rem] h-[20rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105">
+                            <h2 className="text-[1.7rem] md:text-[2rem] font-bold mb-4 text-[#ffae00]">
+                                <span className="text-gray-800">Breathtaking</span> <span className="text-[#ffae00]">Scenery</span>
+                            </h2>
+                            <p className="text-lg font-[400] px-4 text-center text-gray-700">
+                                Immerse yourself in the stunning natural beauty that surrounds our resort, with panoramic views and serene
+                                landscapes that will leave you in awe.
+                            </p>
+                        </div>
+                        <div className="bg-white shadow-xl rounded-lg card w-[22rem] md:w-[25rem] h-[20rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105">
+                            <h2 className="text-[1.7rem] md:text-[2rem] font-bold mb-4 text-[#ffae00]">
+                                <span className="text-gray-800">Exceptional</span> <span className="text-[#ffae00]">Service</span>
+                            </h2>
+                            <p className="text-lg font-[400] px-4 text-center text-gray-700">
+                                Our dedicated team of professionals is committed to providing you with personalized attention and ensuring your
+                                every need is met, making your stay truly unforgettable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Amenties and Actiity section */}
+                <div className="w-full h-[auto] my-8">
+                    <div className="flex flex-col justify-center items-center">
+                        <h2 className="text-center font-bold text-[3.5rem] md:text-[4.5rem] text-gray-800">
+                            Amenities & Activities
+                        </h2>
+                        <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-600 px-4 md:px-0">
+                            Discover the endless possibilities for relaxation and adventure at our resort.
+                        </p>
+                    </div>
+                    <div className="bg-white shadow-xl rounded-lg p-6 my-11">
+                        <table className="w-full">
+                            <thead>
+                                <tr>
+                                    <th className="text-[1.8rem] font-bold text-[#ffae00] pb-4">Amenities</th>
+                                    <th className="text-[1.8rem] font-bold text-[#ffae00] pb-4">Activities</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr className="border-b border-gray-200">
+                                    <td className="py-4">
+                                        <div className="flex items-center">
+                                            <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium">Luxurious Spa</p>
+                                        </div>
+                                    </td>
+                                    <td className="py-4">
+                                        <div className="flex items-center">
+                                            <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium">Scenic Hiking Trails</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr className="border-b border-gray-200">
+                                    <td className="py-4">
+                                        <div className="flex items-center">
+                                            <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium">State-of-the-Art Fitness Center</p>
+                                        </div>
+                                    </td>
+                                    <td className="py-4">
+                                        <div className="flex items-center">
+                                            <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium">Exciting Water Sports</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="py-4">
+                                        <div className="flex items-center">
+                                            <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium">Refreshing Swimming Pools</p>
+                                        </div>
+                                    </td>
+                                    <td className="py-4">
+                                        <div className="flex items-center">
+                                            <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium">Championship Golf Course</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="p-4 text-center">
+                        <p class="text-lg font-medium">
+                            <span className="text-[#ffae00] text-xl">Thank you </span>for visiting our website. We hope you found the information you were looking for and that it was helpful to you. If you have any questions or need further assistance, please don't hesitate to contact us. <span className="text-[#37a4d7] text-xl"> We're here to help!</span>
+                        </p>
+                    </div>
+                </div>
             </div>
             <Footer />
         </>
