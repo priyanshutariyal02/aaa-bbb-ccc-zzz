@@ -10,7 +10,7 @@ const Booking = () => {
                         <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
                             <div>
                                 <p className='text-black p-2 font-bold'>Name</p>
-                                <input type="text" name="name" id="name" placeholder='Ex: John Doe' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
+                                <input type="text" name="name" id="name" placeholder='Ex: John Doe' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required autoFocus />
                             </div>
                             <div>
                                 <p className='text-black p-2 font-bold'>Phone</p>
