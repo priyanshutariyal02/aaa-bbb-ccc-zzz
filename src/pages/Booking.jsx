@@ -2,12 +2,12 @@ import React from 'react'
 
 const Booking = () => {
     return (
-        <div className='w-full min-h-[100vh] pt-[10rem]'>
-            <div className='w-full h-screen flex '>
+        <div className='w-full min-h-[100vh] pt-[10rem] '>
+            <div className='w-full h-screen flex booking-page'>
                 {/* Form  */}
                 <form className='w-[60%] h-[70vh]'>
-                    <div className='container h-full shadow-xl flex flex-col gap-10 justify-center items-center bg-white'>
-                        <div className='grid grid-cols-2 gap-8 justify-center'>
+                    <div className='w-full h-full shadow-xl flex flex-col gap-10 justify-center items-center bg-white booking-container'>
+                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
                             <div>
                                 <p className='text-black p-2 font-bold'>Name</p>
                                 <input type="text" name="name" id="name" placeholder='Ex: John Doe' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
@@ -18,7 +18,7 @@ const Booking = () => {
                             </div>
                         </div>
 
-                        <div className='grid grid-cols-2 gap-8 justify-center'>
+                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
                             <div>
                                 <p className='text-black p-2 font-bold'>Email</p>
                                 <input type="email" name="email" id="email" placeholder='Ex: johndoe@gmail.com' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
@@ -29,7 +29,7 @@ const Booking = () => {
                             </div>
                         </div>
 
-                        <div className='grid grid-cols-2 gap-8 justify-center'>
+                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
                             <div>
                                 <p className='text-black p-2 font-bold'>Check out</p>
                                 <input type="date" name="checkout" id="checkout" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
@@ -40,7 +40,7 @@ const Booking = () => {
                             </div>
                         </div>
 
-                        <div className='grid grid-cols-2 gap-8 justify-center'>
+                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
                             <div>
                                 <p className='text-black p-2 font-bold'>Adults</p>
                                 <input type="number" name="adults" id="adults" placeholder='number of adults' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
@@ -57,10 +57,11 @@ const Booking = () => {
 
 
                     </div>
-
                 </form>
-                <div className='w-[40%] h-[70%] border-4 border-black text-black'>
-                    <div className='container h-full shadow-xl flex flex-col gap-10 justify-center items-center'>
+
+                {/* Booking Details */}
+                <div className='w-[40%] h-[70%] border-4 border-black text-black booking-details'>
+                    <div className='container h-full flex flex-col gap-10 justify-center items-center'>
                         <h1 className='font-bold text-6xl mb-8'>Booking Details</h1>
                         <table className='border-collapse w-full grid items-center justify-center text-lg'>
                             <tbody>
