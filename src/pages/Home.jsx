@@ -4,6 +4,7 @@ import HomeImg from '../components/HomeImg';
 import transfer from '../assets/icons/transfer.png'
 import resortImg from '../assets/resort1.avif'
 import { bed, bath, food, bedroom, location } from "../assets/icons/icon.js";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const inputs = "border border-black w-[15rem] h-[3rem] px-3 outline-none rounded-lg";
@@ -29,7 +30,7 @@ const Home = () => {
                                 type="date"
                                 name="checkin"
                                 id="checkin"
-                            
+
                                 className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
                         </div>
                     </div>
@@ -48,7 +49,9 @@ const Home = () => {
                             <input type="number" name="children" id="children" className={inputs} placeholder='number of children' />
                         </div>
                     </div>
-                    <button type="submit" className='bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-400 transition duration-200'>Book</button>
+                    <Link to="/booking">
+                        <button type="submit" className='bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-400 transition duration-200'>Book</button>
+                    </Link>
                 </form>
 
                 <div className='w-full h-[auto] my-8'>
