@@ -3,18 +3,23 @@ import React, { useRef, useState } from 'react'
 import HomeImg from '../components/HomeImg';
 import transfer from '../assets/icons/transfer.png'
 import resortImg from '../assets/resort1.avif'
-import { bed, bath, food, bedroom, location } from "../assets/icons/icon.js";
+import { bed, bath, food, bedroom, location, whatsapp, instagram, youtube, facebook } from "../assets/icons/icon.js";
 import { Link } from 'react-router-dom';
 
 const Home = () => {
     const inputs = "border border-black w-[15rem] h-[3rem] px-3 outline-none rounded-lg";
 
 
+    let nrooms;
+    const handleRoomChange = (e) => {
+        nrooms = e.target.value;
+        console.log(nrooms);
+    }
     return (
         <>
             <div className="bg-slate-300/20 flex flex-col justify-center items-center">
                 <HomeImg />
-                <form className="w-[70%] h-[auto] bg-white my-10 shadow-xl rounded-xl flex flex-col gap-10 justify-center items-center py-6 hotel-rev" >
+                {/* <form className="w-[70%] h-[auto] bg-white my-10 shadow-xl rounded-xl flex flex-col gap-10 justify-center items-center py-6 hotel-rev" >
 
                     <div className='flex gap-20 items-center check-in-out'>
                         <div>
@@ -38,25 +43,44 @@ const Home = () => {
                     <div className='flex gap-20 gusts'>
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Rooms</p>
-                            <input type="number" name="rooms" id="rooms" className={inputs} placeholder='number of rooms' />
+                            <input
+                                type="number"
+                                name="rooms"
+                                id="rooms"
+                                value={nrooms}
+                                onChange={handleRoomChange}
+                                className={inputs} placeholder='number of rooms' />
                         </div>
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Adults</p>
-                            <input type="number" name="adults" id="adults" className={inputs} placeholder='number of adults' />
+                            <input
+                                type="number"
+                                name="adults"
+                                id="adults"
+                                className={inputs} placeholder='number of adults' />
                         </div>
                         <div>
                             <p className='text-black rounded-lg p-2 font-bold'>Children</p>
-                            <input type="number" name="children" id="children" className={inputs} placeholder='number of children' />
+                            <input
+                                type="number"
+                                name="children"
+                                id="children"
+                                className={inputs} placeholder='number of children' />
                         </div>
                     </div>
-                    <Link to="/booking">
+                    <Link to={{
+                        pathname: '/booking',
+                        state: {
+                            nrooms: nrooms
+                        }
+                    }}>
                         <button type="submit" className='bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-400 transition duration-200'>Book</button>
                     </Link>
-                </form>
+                </form> */}
 
-                <div className='w-full h-[auto] my-8'>
+                <div className='w-full h-[auto] my-11'>
                     <div className='flex flex-col justify-center items-center'>
-                        <h1 className='text-center font-bold text-[4.5rem] md:text-[3rem]'>Special Offers</h1>
+                        <h1 className='text-center font-bold text-[4.5rem] special-offer'>Special Offers</h1>
                         <div className='text-center my-2 text-lg font-[400] special-offer-para'>
                             <p>Destination can be described where you are going, Like a traveler whose</p>
                             <p>destination is Paris, Or a place that is known for a popular purpose.</p>
@@ -75,10 +99,10 @@ const Home = () => {
                                     <p className='text-yellow-300 border border-yellow-300 px-2 rounded-xl'>offer</p>
                                 </div>
                                 <div className='grid grid-cols-2 gap-4 p-4 text-center font-[500]'>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bed} alt="bed" className='w-[30px]' />2 Beds</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bath} alt="bath" className='w-[30px]' />1 Bath</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={food} alt="food" className='w-[30px]' />Food</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bedroom} alt="bedroom" className='w-[30px]' />Bedroom</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bed} alt="bed" className='w-[4rem]' />2 Beds</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bath} alt="bath" className='w-[4rem]' />1 Bath</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={food} alt="food" className='w-[4rem]' />Food</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bedroom} alt="bedroom" className='w-[4rem]' />Bedroom</p>
                                 </div>
 
                                 <div className='flex gap-2 items-center p-4'>
@@ -102,10 +126,10 @@ const Home = () => {
                                     <p className='text-yellow-300 border border-yellow-300 px-2 rounded-xl'>offer</p>
                                 </div>
                                 <div className='grid grid-cols-2 gap-4 p-4 text-center font-[500]'>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bed} alt="bed" className='w-[30px]' />2 Beds</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bath} alt="bath" className='w-[30px]' />1 Bath</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={food} alt="food" className='w-[30px]' />Food</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bedroom} alt="bedroom" className='w-[30px]' />Bedroom</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bed} alt="bed" className='w-[4rem]' />2 Beds</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bath} alt="bath" className='w-[4rem]' />1 Bath</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={food} alt="food" className='w-[4rem]' />Food</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bedroom} alt="bedroom" className='w-[4rem]' />Bedroom</p>
                                 </div>
 
                                 <div className='flex gap-2 items-center p-4'>
@@ -129,10 +153,10 @@ const Home = () => {
                                     <p className='text-yellow-300 border border-yellow-300 px-2 rounded-xl'>offer</p>
                                 </div>
                                 <div className='grid grid-cols-2 gap-4 p-4 text-center font-[500]'>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bed} alt="bed" className='w-[30px]' />2 Beds</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bath} alt="bath" className='w-[30px]' />1 Bath</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={food} alt="food" className='w-[30px]' />Food</p>
-                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bedroom} alt="bedroom" className='w-[30px]' />Bedroom</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bed} alt="bed" className='w-[4rem]' />2 Beds</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bath} alt="bath" className='w-[4rem]' />1 Bath</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={food} alt="food" className='w-[4rem]' />Food</p>
+                                    <p className='bg-slate-100 shadow-lg rounded-lg py-2'><img src={bedroom} alt="bedroom" className='w-[4rem]' />Bedroom</p>
                                 </div>
 
                                 <div className='flex gap-2 items-center p-4'>
@@ -209,43 +233,43 @@ const Home = () => {
                             <tbody>
                                 <tr className="border-b border-gray-200">
                                     <td className="py-4">
-                                        <div className="flex items-center">
+                                        <div className="flex items-center justify-center ml-[-3rem]">
                                             <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
-                                            <p className="text-gray-600 text-[1.1rem] font-medium">Luxurious Spa</p>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">Luxurious Spa</p>
                                         </div>
                                     </td>
                                     <td className="py-4">
-                                        <div className="flex items-center">
+                                        <div className="flex items-center justify-center">
                                             <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
-                                            <p className="text-gray-600 text-[1.1rem] font-medium">Scenic Hiking Trails</p>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">Scenic Hiking Trails</p>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr className="border-b border-gray-200">
                                     <td className="py-4">
-                                        <div className="flex items-center">
+                                        <div className="flex items-center justify-center">
                                             <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
-                                            <p className="text-gray-600 text-[1.1rem] font-medium">State-of-the-Art Fitness Center</p>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">State-of-the-Art Fitness Center</p>
                                         </div>
                                     </td>
                                     <td className="py-4">
-                                        <div className="flex items-center">
+                                        <div className="flex items-center justify-center">
                                             <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
-                                            <p className="text-gray-600 text-[1.1rem] font-medium">Exciting Water Sports</p>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">Exciting Water Sports</p>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="py-4">
-                                        <div className="flex items-center">
+                                        <div className="flex items-center justify-center">
                                             <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
-                                            <p className="text-gray-600 text-[1.1rem] font-medium">Refreshing Swimming Pools</p>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">Refreshing Swimming Pools</p>
                                         </div>
                                     </td>
                                     <td className="py-4">
-                                        <div className="flex items-center">
+                                        <div className="flex items-center justify-center">
                                             <span className="text-[1.4rem] font-bold text-gray-800 mr-3">•</span>
-                                            <p className="text-gray-600 text-[1.1rem] font-medium">Championship Golf Course</p>
+                                            <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">Championship Golf Course</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -258,6 +282,20 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
+
+
+                <hr className='mt-[4rem] border-gray-400 w-[80%] mx-auto' />
+                {/* Social media */}
+                <div className='w-full h-[auto] flex flex-col justify-center items-center my-11 p-6 social-links'>
+                    <h1 className='font-bold text-[4rem]'>Social Links</h1>
+                    <div className='w-full p-5 flex gap-[10rem]  items-center justify-center mt-[3rem] social-icons'>
+                        <img src={whatsapp} alt="whatsapp" className='w-[4rem] h-[4rem] hover:scale-125 duration-200' />
+                        <img src={instagram} alt="instagram" className='w-[4rem] h-[4rem] hover:scale-125 duration-200' />
+                        <img src={facebook} alt="facebook" className='w-[4rem] h-[4rem] hover:scale-125 duration-200' />
+                        <img src={youtube} alt="youtube" className='w-[4rem] h-[4rem] hover:scale-125 duration-200' />
+                    </div>
+                </div>
+
             </div>
         </>
     )

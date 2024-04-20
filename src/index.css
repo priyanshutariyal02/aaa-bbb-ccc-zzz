@@ -142,9 +142,12 @@ footer {
         flex-direction: column;
         gap: 2rem;
     }
+.special-offer{
+    font-size: 3rem;
+}
 
     .special-offer-para {
-        font-size: 11px;
+        font-size: 12px;
         padding: 0 30px;
         line-height: 1rem;
     }
@@ -156,6 +159,21 @@ footer {
     .card-img {
         width: 20rem;
         height: 15rem;
+    }
+
+    .a-and-a-p{
+        font-size: 15px;
+    }
+    .social-links h1{
+        font-size: 3rem;
+    }
+
+    .social-links .social-icons{
+        gap: 2rem;
+    }
+    .social-links img{
+        width: 40px;
+        height: 40px;
     }
 
     footer {
