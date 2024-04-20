@@ -142,9 +142,10 @@ footer {
         flex-direction: column;
         gap: 2rem;
     }
-.special-offer{
-    font-size: 3rem;
-}
+
+    .special-offer {
+        font-size: 3rem;
+    }
 
     .special-offer-para {
         font-size: 12px;
@@ -161,17 +162,19 @@ footer {
         height: 15rem;
     }
 
-    .a-and-a-p{
+    .a-and-a-p {
         font-size: 15px;
     }
-    .social-links h1{
+
+    .social-links h1 {
         font-size: 3rem;
     }
 
-    .social-links .social-icons{
+    .social-links .social-icons {
         gap: 2rem;
     }
-    .social-links img{
+
+    .social-links img {
         width: 40px;
         height: 40px;
     }
@@ -202,7 +205,7 @@ footer {
 
     }
 
-
+    /* Booking  */
 
     .booking-page {
         flex-direction: column;
@@ -238,8 +241,25 @@ footer {
         border: none;
         padding: 2rem;
     }
-    .booking-page .booking-details h1{
-       text-align: center; 
+
+    .booking-page .booking-details h1 {
+        text-align: center;
+    }
+
+    /* Proceed */
+
+    .proceed-message {
+        width: 21rem;
+        height: 25rem;
+    }
+
+    .proceed-message h1 {
+        font-size: 3rem;
+
+    }
+
+    .proceed-message p {
+        font-size: 15px;
     }
 
 }
