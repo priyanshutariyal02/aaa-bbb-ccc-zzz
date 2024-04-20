@@ -238,5 +238,8 @@ footer {
         border: none;
         padding: 2rem;
     }
+    .booking-page .booking-details h1{
+       text-align: center; 
+    }
 
 }

@@ -166,7 +166,7 @@ const Booking = () => {
                 {/* Booking Details */}
                 <div className='w-[40%] h-[70%] border-4 border-black text-black booking-details' tabIndex={-1} ref={bookingDetailsRef}>
                     <div className='container h-full flex flex-col gap-10 justify-center items-center'>
-                        <h1 className='font-bold text-6xl mb-8'>Booking Details</h1>
+                        <h1 className='font-bold text-6xl mb-8'>Booking <span className='text-[#ffae00]'>Details</span></h1>
                         <table className='border-collapse w-full grid items-center justify-center text-lg'>
                             <tbody>
                                 <tr className='border-b border-black px-5'>
