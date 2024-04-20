@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Link } from "react-router-dom";
+
 const Proceed = () => {
+    const proceedMessage = useRef(null);
+
+    useEffect(() => {
+        proceedMessage.current.focus();
+    }, []);
+
     return (
-        <div className='w-full min-h-[100vh]'>
+        <div className='w-full min-h-[100vh]' tabIndex={-1} ref={proceedMessage}>
             <div className='w-full min-h-[100vh] flex justify-center items-center'>
                 <div className='bg-green-50 w-[40rem] h-[20rem] border-2 border-green-500 flex items-center justify-center flex-col proceed-message'>
                     <h1 className='text-[4rem] font-bold'>Thank you!</h1>
