@@ -262,4 +262,13 @@ footer {
         font-size: 15px;
     }
 
+    .blog-embed{
+        padding: 0;
+        margin-top: -5rem;
+    }
+
+    iframe{
+        padding: 0;
+    }
+
 }
