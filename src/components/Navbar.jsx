@@ -35,6 +35,9 @@ const Navbar = ({ logo }) => {
                     <NavLink onClick={showNavbar} to='/contact' className='w-[5rem] h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md hover:text-red hover:text-[#ff3b65] duration-200'>
                         Contact
                     </NavLink>
+                    <NavLink onClick={showNavbar} to='/booking' className='w-[5rem] h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md hover:text-red hover:text-[#ff3b65] duration-200'>
+                        Booking
+                    </NavLink>
                     <NavLink onClick={showNavbar} to='/blog' className='w-[5rem] h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md hover:text-red hover:text-[#ff3b65] duration-200'>
                         Blog
                     </NavLink>

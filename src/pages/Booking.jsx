@@ -183,7 +183,7 @@ const Booking = () => {
                                 </tr>
                                 <tr className='text-4xl'>
                                     <th className='p-2 text-left'>Total:</th>
-                                    <td className='p-2 font-bold'>₹{100 * days}</td>
+                                    <td className='p-2 font-bold'>₹{!days ? '0' : (100 * days)}</td>
                                 </tr>
                             </tbody>
                         </table>
