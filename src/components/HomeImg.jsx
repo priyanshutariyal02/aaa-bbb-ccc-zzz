@@ -14,7 +14,7 @@ const HomeImg = () => {
 
       <div className='absolute bottom-0 flex justify-center items-center w-full p-10'>
         <Link to='/booking'>
-          <button type="submit" className='bg-[#ffae00] text-white font-semibold py-2 px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200'>Quick Booking</button>
+          <button type="submit" className='bg-[#ffae00] text-white font-semibold px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200'>Quick Booking</button>
         </Link>
       </div>
       {/* <div className='w-full p-5 flex gap-4 absolute items-center justify-center bottom-0 '>

@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
 import Footer from "./components/Footer";
 import Booking from "./pages/Booking";
+import Proceed from "./pages/Proceed";
 function App(props) {
   return (
     <main className="main-cintainer bg-slate-300/20">
@@ -20,6 +21,7 @@ function App(props) {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/proceed" element={<Proceed />} />
         </Routes>
       </Router>
       <Footer />

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-
+import { Link } from "react-router-dom";
 
 const Booking = () => {
 
@@ -53,6 +53,9 @@ const Booking = () => {
 
     const days = calculateNumberOfDays(enteredValues.checkin, enteredValues.checkout);
 
+    const one_room = 500;
+    const t_room_price = one_room * enteredValues.rooms;
+
     return (
         <div className='w-full min-h-[100vh] pt-[10rem] '>
             <div className='w-full h-screen flex booking-page'>
@@ -79,7 +82,7 @@ const Booking = () => {
                                     id="phone"
                                     // value={enteredValues.phone}
                                     // onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    placeholder='10-digit phone number' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
+                                    placeholder='10-digit phone number' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
                             </div>
                         </div>
 
@@ -101,7 +104,7 @@ const Booking = () => {
                                     name="checkin"
                                     // value={enteredValues.checkin}
                                     // onChange={(e) => handleInputChange('checkin', e.target.value)}
-                                    id="checkin" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
+                                    id="checkin" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
                             </div>
                         </div>
 
@@ -113,7 +116,7 @@ const Booking = () => {
                                     name="checkout"
                                     // value={enteredValues.checkout}
                                     // onChange={(e) => handleInputChange('checkout', e.target.value)}
-                                    id="checkout" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
+                                    id="checkout" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
                             </div>
                             <div>
                                 <p className='text-black p-2 font-bold'>Rooms <span className='text-red-500'>*</span></p>
@@ -124,7 +127,7 @@ const Booking = () => {
                                     // value={enteredValues.rooms}
                                     // onChange={(e) => handleInputChange('rooms', e.target.value)}
 
-                                    placeholder='number of rooms' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
+                                    placeholder='number of rooms' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
                             </div>
                         </div>
 
@@ -183,11 +186,21 @@ const Booking = () => {
                                 </tr>
                                 <tr className='text-4xl'>
                                     <th className='p-2 text-left'>Total:</th>
-                                    <td className='p-2 font-bold'>₹{!days ? '0' : (100 * days)}</td>
+                                    <td className='p-2 font-bold'>₹{!days ? '0' : ((100 * days) + t_room_price)}</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <button className='bg-green-500 text-white py-2 px-[4rem] rounded-lg hover:bg-green-400 transition duration-200 mt-4 font-bold'>Pay</button>
+                        {
+                            days ? (
+                                <Link to='/proceed'>
+                                    <button className='bg-green-500 text-white py-2 px-[3rem] rounded-lg hover:bg-green-400 transition duration-200 mt-4 font-bold'>Proceed</button>
+                                </Link>
+                            ) : (
+                                <button className='bg-green-500 text-white py-2 px-[3rem] rounded-lg hover:bg-green-400 transition duration-200 mt-4 font-bold'>Proceed</button>
+                            )
+                        }
+
+
                     </div>
                 </div>
             </div>
