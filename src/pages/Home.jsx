@@ -102,15 +102,19 @@ const Home = () => {
               Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
             </p>
           </div>
+          <div className="w-full h-[44rem] mt-[4rem]">
+            <iframe
+              src="https://widgets.sociablekit.com/facebook-page-posts/iframe/25400722"
+              frameborder="0"
+              width="100%"
+              height="100%"
+            ></iframe>
+          </div>
+
+          {/* 
           <div className="flex flex-col justify-center items-center my-11 gap-10 md:flex-row md:justify-center md:items-center md-device">
-            <div className="bg-white shadow-xl rounded-lg card w-[100rem] h-[44rem] flex flex-col justify-center items-center event-section">
-              <iframe
-                src="https://widgets.sociablekit.com/facebook-page-posts/iframe/25400722"
-                frameborder="0"
-                width="100%"
-                height="100%"
-              ></iframe>
-              {/* <p className="text-lg font-semibold px-4 text-center text-gray-700">
+            <div className="bg-white italic shadow-xl rounded-lg card w-[30rem] h-[25rem] flex flex-col justify-center items-center event-section overflow-hidden">
+              <p className="text-lg font-semibold px-4 text-center text-gray-700">
                 Dive into an unforgettable journey at AIESEC's TLC Local
                 Congress 2024! 🌟 Mark your calendars for April 20th & 21st and
                 join us for two action-packed days of empowerment and fun.
@@ -120,12 +124,12 @@ const Home = () => {
                 away and showcase your talents in our vibrant talent hunt
                 events. Don't miss out on this incredible opportunity to
                 connect, learn, and grow with us!
-              </p> */}
+              </p>
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <div className="w-full h-[auto] my-11">
+        <div className="w-full h-[auto]">
           {/* Special offer */}
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[4.5rem] special-offer">
