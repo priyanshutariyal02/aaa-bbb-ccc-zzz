@@ -28,7 +28,10 @@ const Home = () => {
     <>
       <div className="bg-slate-300/20 flex flex-col justify-center items-center">
         <HomeImg />
-        {/* 
+
+        {/* comment off */}
+        <>
+          {/* 
         <form className="w-[70%] h-[auto] bg-white my-10 shadow-xl rounded-xl flex flex-col gap-10 justify-center items-center py-6 hotel-rev" >
 
                     <div className='flex gap-20 items-center check-in-out'>
@@ -88,19 +91,26 @@ const Home = () => {
                     </Link>
                 </form> 
                 */}
+        </>
 
         <div className="w-full h-[auto] my-11">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
-              <span className="text-gray-800">Events</span>
+              <span className="text-gray-800">Events & Blogs</span>
             </h1>
             <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-700 px-4 md:px-0">
               Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
             </p>
           </div>
           <div className="flex flex-col justify-center items-center my-11 gap-10 md:flex-row md:justify-center md:items-center md-device">
-            <div className="bg-white italic shadow-xl rounded-lg card w-[30rem] md:w-[25rem] h-[28rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105 event-section">
-              <p className="text-lg font-semibold px-4 text-center text-gray-700">
+            <div className="bg-white shadow-xl rounded-lg card w-[100rem] h-[44rem] flex flex-col justify-center items-center event-section">
+              <iframe
+                src="https://widgets.sociablekit.com/facebook-page-posts/iframe/25400722"
+                frameborder="0"
+                width="100%"
+                height="100%"
+              ></iframe>
+              {/* <p className="text-lg font-semibold px-4 text-center text-gray-700">
                 Dive into an unforgettable journey at AIESEC's TLC Local
                 Congress 2024! 🌟 Mark your calendars for April 20th & 21st and
                 join us for two action-packed days of empowerment and fun.
@@ -110,34 +120,8 @@ const Home = () => {
                 away and showcase your talents in our vibrant talent hunt
                 events. Don't miss out on this incredible opportunity to
                 connect, learn, and grow with us!
-              </p>
+              </p> */}
             </div>
-            {/* <div className="bg-white italic shadow-xl rounded-lg card w-[30rem] md:w-[25rem] h-[28rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105 event-section">
-              <p className="text-lg font-semibold px-4 text-center text-gray-700">
-                Dive into an unforgettable journey at AIESEC's TLC Local
-                Congress 2024! 🌟 Mark your calendars for April 20th & 21st and
-                join us for two action-packed days of empowerment and fun.
-                Experience engaging speeches and diverse agendas led by our
-                passionate heads and EBs. From inspiring talks to thrilling
-                talent hunts, there's something for everyone. Dance the night
-                away and showcase your talents in our vibrant talent hunt
-                events. Don't miss out on this incredible opportunity to
-                connect, learn, and grow with us!
-              </p>
-            </div>
-            <div className="bg-white italic shadow-xl rounded-lg card w-[30rem] md:w-[25rem] h-[28rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105 event-section">
-              <p className="text-lg font-semibold px-4 text-center text-gray-700">
-                Dive into an unforgettable journey at AIESEC's TLC Local
-                Congress 2024! 🌟 Mark your calendars for April 20th & 21st and
-                join us for two action-packed days of empowerment and fun.
-                Experience engaging speeches and diverse agendas led by our
-                passionate heads and EBs. From inspiring talks to thrilling
-                talent hunts, there's something for everyone. Dance the night
-                away and showcase your talents in our vibrant talent hunt
-                events. Don't miss out on this incredible opportunity to
-                connect, learn, and grow with us!
-              </p>
-            </div> */}
           </div>
         </div>
 
@@ -297,7 +281,7 @@ const Home = () => {
         <div className="w-full h-[auto] my-8">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
-              <span className="text-gray-800">Why</span>
+              <span className="text-gray-800">Why </span>
               <span className="text-[#ffae00]">Choose Us?</span>
             </h1>
             <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-700 px-4 md:px-0">
