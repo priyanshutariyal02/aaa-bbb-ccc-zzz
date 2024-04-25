@@ -21,7 +21,7 @@ const Navbar = ({ logo }) => {
         
         >
             <NavLink to="/">
-                <img src={logo} alt="logo" className='w-[233px] h-[60px] object-cover rounded-lg shadow-md home-logo' />
+                <img src={logo} alt="logo" className='w-[160px] h-[70px] object-cover rounded-lg shadow-md home-logo' />
             </NavLink>
 
             <nav ref={navRef} className="flex text-lg gap-[10rem] font-medium md-device">

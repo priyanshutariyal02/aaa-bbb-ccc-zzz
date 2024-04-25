@@ -1,29 +1,32 @@
-import React from 'react'
-import resort1 from '../assets/resort1.avif'
+import React from "react";
+import resort1 from "../assets/resort1.avif";
 const About = () => {
   return (
     <>
       <section className="bg-gray-100 py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-[4rem]">
-          <div className="flex flex-row-reverse gap-8 items-center about-section">
-            <div className="relative overflow-hidden">
+          <div className="flex w-full gap-[3rem] flex-row-reverse items-center about-section">
+            <div className="relative overflow-hidden w-[50%] about-container">
               <img
                 src={resort1}
                 alt="About Us"
                 className="rounded-md shadow-lg transition duration-300 ease-in-out hover:scale-110"
               />
             </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                We are a team of passionate individuals dedicated to creating innovative solutions that
-                make a difference. Our mission is to empower our clients and help them achieve their
-                goals through cutting-edge technology and personalized service.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                With years of experience in the industry, we have developed a deep understanding of
-                the challenges our clients face. We use this knowledge to tailor our services and
-                deliver results that exceed expectations.
+            <div className="w-[50%] about-container">
+              <h2 className="text-[4rem] font-semibold mb-4">About Us</h2>
+              <p className="text-gray-700 leading-relaxed mb-6 py-5 text-[20px] text-justify tracking-wide  about-para">
+                Welcome to Grand View Resort, nestled between the
+                picturesque towns of Dhanaulti and the majestic Queen of Hills,
+                Mussoorie! Our prime location offers breathtaking vistas of the
+                Himalayas at dawn and the tranquil Doon Valley by night. Each
+                cottage provides a cozy retreat with spacious bedroom areas
+                measuring 15x12 feet, complete with modern washroom facilities.
+                Step onto your private balcony, measuring 5x4 feet, and immerse
+                yourself in the serene surroundings, perfect for unwinding after
+                a day of exploration. Experience comfort and tranquility with
+                every stay at Grand View Resort, where nature's beauty awaits
+                just beyond your doorstep.
               </p>
               <a
                 href="/"
@@ -32,12 +35,11 @@ const About = () => {
                 Home
               </a>
             </div>
-
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
 export default About;
