@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import HomeImg from "../components/HomeImg";
 import transfer from "../assets/icons/transfer.png";
 import resortImg from "../assets/resort1.avif";
-import BlogHome from "./blogpage/src/pages/BlogHome";
+import { Link } from "react-router-dom";
 import {
   bed,
   bath,
@@ -101,8 +101,15 @@ const Home = () => {
               Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
             </p>
           </div>
-          <div className="w-full h-[auto] overflow-y-hidden overflow-hidden">
-            <BlogHome />
+          <div className="w-full h-[auto] flex justify-center mt-[3rem]">
+            <p className="bg-white shadow-xl rounded-lg card w-[30rem] h-[20rem] px-7 py-5 text-justify tracking-wide text-lg flex flex-col justify-center items-center event-section">
+              Event was organised on 20 & 21st of april 2024… AISEC a youth
+              runned organisation had their local congress called as trek local
+              conference(TLC)… the memebers had their conference for 20&21st of
+              april with their different agendas… had a lot many spaces(
+              speeches) from their heads or EBs they had a lot many activities
+              with a lot many dancing and talent hunt events…
+            </p>
           </div>
 
           {/* 
@@ -127,7 +134,7 @@ const Home = () => {
           {/* Special offer */}
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[4.5rem] special-offer">
-              Special Offers
+              Special Discount
             </h1>
             <div className="text-center my-2 text-lg font-[400] special-offer-para">
               <p>
@@ -179,9 +186,11 @@ const Home = () => {
                   <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className="text-right my-2">
-                  <button className="bg-[#ffae00] text-white px-3 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
-                    view details
-                  </button>
+                  <Link to="/booking">
+                    <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
+                      Book
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -223,9 +232,11 @@ const Home = () => {
                   <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className="text-right my-2">
-                  <button className="bg-[#ffae00] text-white px-3 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
-                    view details
+                <Link to="/booking">
+                  <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
+                    Book
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -267,9 +278,11 @@ const Home = () => {
                   <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className="text-right my-2">
-                  <button className="bg-[#ffae00] text-white px-3 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
-                    view details
+                <Link to="/booking">
+                  <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
+                    Book
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
