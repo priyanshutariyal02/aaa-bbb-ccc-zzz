@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import HomeImg from "../components/HomeImg";
 import transfer from "../assets/icons/transfer.png";
 import resortImg from "../assets/resort1.avif";
+import BlogHome from "./blogpage/src/pages/BlogHome";
 import {
   bed,
   bath,
@@ -13,8 +14,6 @@ import {
   youtube,
   facebook,
 } from "../assets/icons/icon.js";
-import { Link } from "react-router-dom";
-
 const Home = () => {
   const inputs =
     "border border-black w-[15rem] h-[3rem] px-3 outline-none rounded-lg";
@@ -102,13 +101,8 @@ const Home = () => {
               Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
             </p>
           </div>
-          <div className="w-full h-[44rem] mt-[4rem]">
-            <iframe
-              src="https://widgets.sociablekit.com/facebook-page-posts/iframe/25400722"
-              frameborder="0"
-              width="100%"
-              height="100%"
-            ></iframe>
+          <div className="w-full h-[auto] overflow-y-hidden overflow-hidden">
+            <BlogHome />
           </div>
 
           {/* 

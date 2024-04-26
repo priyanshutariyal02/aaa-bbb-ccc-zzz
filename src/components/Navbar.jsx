@@ -41,9 +41,9 @@ const Navbar = ({ logo }) => {
                     <NavLink onClick={showNavbar} to='/booking' className='w-[6rem] h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md hover:text-red hover:text-[#ff3b65] duration-200'>
                         Booking
                     </NavLink>
-                    {/* <NavLink onClick={showNavbar} to='/blog' className='w-[6rem] h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md hover:text-red hover:text-[#ff3b65] duration-200'>
+                    <NavLink onClick={showNavbar} to='/blog' className='w-[6rem] h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md hover:text-red hover:text-[#ff3b65] duration-200'>
                         Blog
-                    </NavLink> */}
+                    </NavLink>
                 </div>
 
                 <button onClick={showNavbar} className='bg-white rounded-xl p-3 shadow-md nav-btn nav-close-btn absolute z-[999] top-0 right-0 m-5 text-[1.5rem]'>
