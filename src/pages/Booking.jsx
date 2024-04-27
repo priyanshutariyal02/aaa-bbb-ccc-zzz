@@ -1,212 +1,300 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import useAlert from "../hooks/useAlert";
+import Alert from "../components/Alert.jsx";
 
 const Booking = () => {
+  const formRef = useRef(null);
 
-    const [enteredValues, setEnteredValues] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        checkin: '',
-        checkout: '',
-        rooms: '',
-        adults: '',
-        children: ''
-    });
+  const [isLoading, setIsLoading] = useState(false);
+  const { alert, showAlert, hideAlert } = useAlert();
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    checkin: "",
+    checkout: "",
+    rooms: "",
+    adults: "",
+    children: "",
+  });
 
-    const bookingDetailsRef = useRef(null);
+  const handleChange = ({ target: { name, value } }) => {
+    setForm({ ...form, [name]: value });
+  };
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        const fd = new FormData(e.target);
-        setEnteredValues({
-            name: fd.get('name'),
-            phone: fd.get('phone'),
-            email: fd.get('email'),
-            checkin: fd.get('checkin'),
-            checkout: fd.get('checkout'),
-            rooms: fd.get('rooms'),
-            adults: fd.get('adults'),
-            children: fd.get('children')
-        });
-        const data = Object.fromEntries(fd.entries());
-        console.log(data);
-        console.log(enteredValues);
-        // e.target.reset();
-        bookingDetailsRef.current.focus();
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
 
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
 
-    function calculateNumberOfDays(checkin, checkout) {
-        // Parse the check-in and check-out dates
-        const checkinDate = new Date(checkin);
-        const checkoutDate = new Date(checkout);
+    setIsLoading(true);
 
-        // Calculate the difference in milliseconds
-        const differenceInMs = checkoutDate - checkinDate;
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_BOOKING_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_phone: form.phone,
+          from_email: form.email,
+          from_checkin: form.checkin,
+          from_checkout: form.checkout,
+          from_rooms: form.rooms,
+          from_adults: form.adults,
+          from_children: form.children,
+          form_days: days,
+          form_amount: t_room_price,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setIsLoading(false);
+          showAlert({
+            show: true,
+            text: "Thank you for your message 😃",
+            type: "success",
+          });
 
-        // Convert milliseconds to days
-        const daysDifference = Math.ceil(differenceInMs / (1000 * 60 * 60 * 24));
+          setTimeout(() => {
+            hideAlert(false);
 
-        return daysDifference;
-    }
+            setForm({
+              name: "",
+              phone: "",
+              email: "",
+              checkin: "",
+              checkout: "",
+              rooms: "",
+              adults: "",
+              children: "",
+            });
+          }, [2000]);
+        },
+        (error) => {
+          setIsLoading(false);
+          console.error(error);
 
-    const days = calculateNumberOfDays(enteredValues.checkin, enteredValues.checkout);
+          showAlert({
+            show: true,
+            text: "I didn't receive your message 😢",
+            type: "danger",
+          });
+        }
+      );
+  }
 
-    const one_room = 500;
-    const t_room_price = one_room * enteredValues.rooms;
+  function calculateNumberOfDays(checkin, checkout) {
+    // Parse the check-in and check-out dates
+    const checkinDate = new Date(checkin);
+    const checkoutDate = new Date(checkout);
 
-    return (
-        <div className='w-full min-h-[100vh] pt-[10rem] '>
-            <div className='w-full h-screen flex booking-page'>
-                {/* Form  */}
-                <form onSubmit={handleSubmit} className='w-[60%] h-[70vh]'>
-                    <div className='w-full h-full shadow-xl flex flex-col gap-10 justify-center items-center bg-white booking-container'>
-                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Name <span className='text-red-500'>*</span></p>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    // value={enteredValues.name}
-                                    // onChange={(e) => handleInputChange('name', e.target.value)}
+    // Calculate the difference in milliseconds
+    const differenceInMs = checkoutDate - checkinDate;
 
-                                    placeholder='Ex: John Doe' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required autoFocus />
-                            </div>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Phone <span className='text-red-500'>*</span></p>
-                                <input
-                                    type="number"
-                                    name="phone"
-                                    id="phone"
-                                    // value={enteredValues.phone}
-                                    // onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    placeholder='10-digit phone number' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
-                            </div>
-                        </div>
+    // Convert milliseconds to days
+    const daysDifference = Math.ceil(differenceInMs / (1000 * 60 * 60 * 24));
 
-                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Email</p>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    // value={enteredValues.email}
-                                    // onChange={(e) => handleInputChange('email', e.target.value)}
-                                    placeholder='Ex: johndoe@gmail.com' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
-                            </div>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Check in <span className='text-red-500'>*</span></p>
-                                <input
-                                    type="date"
-                                    name="checkin"
-                                    // value={enteredValues.checkin}
-                                    // onChange={(e) => handleInputChange('checkin', e.target.value)}
-                                    id="checkin" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
-                            </div>
-                        </div>
+    return daysDifference;
+  }
 
-                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Check out <span className='text-red-500'>*</span></p>
-                                <input
-                                    type="date"
-                                    name="checkout"
-                                    // value={enteredValues.checkout}
-                                    // onChange={(e) => handleInputChange('checkout', e.target.value)}
-                                    id="checkout" className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
-                            </div>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Rooms <span className='text-red-500'>*</span></p>
-                                <input
-                                    name="rooms"
-                                    type="number"
-                                    id="rooms"
-                                    // value={enteredValues.rooms}
-                                    // onChange={(e) => handleInputChange('rooms', e.target.value)}
+  const days = calculateNumberOfDays(form.checkin, form.checkout);
 
-                                    placeholder='number of rooms' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' required />
-                            </div>
-                        </div>
+  const one_room = 8000;
+  const t_room_price = one_room * days * form.rooms;
 
-                        <div className='grid grid-cols-2 gap-8 justify-center book-inp'>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Adults</p>
-                                <input
-                                    type="number"
-                                    name="adults"
-                                    id="adults"
-                                    // value={enteredValues.adults}
-                                    // onChange={(e) => handleInputChange('adults', e.target.value)}
-                                    placeholder='number of adults' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
-                            </div>
-                            <div>
-                                <p className='text-black p-2 font-bold'>Children</p>
-                                <input
-                                    type="number"
-                                    name="children"
-                                    id="children"
-                                    // value={enteredValues.children}
-                                    // onChange={(e) => handleInputChange('children', e.target.value)}
-                                    placeholder='number of children' className='border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg' />
-                            </div>
-                        </div>
-                        <div className='flex justify-center gap-10'>
-                            <button
-                                type="reset"
-                                className='bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-400 transition duration-200'>reset</button>
-                            <button
-                                type="submit"
-                                className='bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-400 transition duration-200'>submit</button>
-                        </div>
-
-
-                    </div>
-                </form>
-
-                {/* Booking Details */}
-                <div className='w-[40%] h-[70%] border-4 border-black text-black booking-details' tabIndex={-1} ref={bookingDetailsRef}>
-                    <div className='container h-full flex flex-col gap-10 justify-center items-center'>
-                        <h1 className='font-bold text-6xl mb-8'>Booking <span className='text-[#ffae00]'>Details</span></h1>
-                        <table className='border-collapse w-full grid items-center justify-center text-lg'>
-                            <tbody>
-                                <tr className='border-b border-black px-5'>
-                                    <th className='p-2 text-left'>Name:</th>
-                                    <td className='p-2'>{enteredValues.name ? enteredValues.name : undefined}</td>
-                                </tr>
-                                <tr className='border-b border-black'>
-                                    <th className='p-2 text-left'>Phone:</th>
-                                    <td className='p-2'>{enteredValues.phone ? enteredValues.phone : undefined}</td>
-                                </tr>
-                                <tr className='border-b border-black'>
-                                    <th className='p-2 text-left'>Number of days:</th>
-                                    <td className='p-2'>{days ? days : undefined}</td>
-                                </tr>
-                                <tr className='text-4xl'>
-                                    <th className='p-2 text-left'>Total:</th>
-                                    <td className='p-2 font-bold'>₹{!days ? '0' : ((100 * days) + t_room_price)}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        {
-                            days ? (
-                                <Link to='/proceed'>
-                                    <button className='bg-green-500 text-white py-2 px-[3rem] rounded-lg hover:bg-green-400 transition duration-200 mt-4 font-bold'>Proceed</button>
-                                </Link>
-                            ) : (
-                                <button className='bg-green-500 text-white py-2 px-[3rem] rounded-lg hover:bg-green-400 transition duration-200 mt-4 font-bold'>Proceed</button>
-                            )
-                        }
-
-
-                    </div>
-                </div>
+  return (
+    <div className="w-full min-h-[100vh] pt-[10rem] ">
+      <div className="w-full h-full min-h-[100vh] flex justify-center booking-page">
+        {/* Form  */}
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="w-[60%] pb-[3rem] min-h-[100vh] bg-white mb-[3rem] shadow-xl"
+        >
+          <div className="w-full flex flex-col gap-10 justify-center items-center p-10">
+            <div className="grid grid-cols-2 gap-8 justify-center book-inp">
+              <div>
+                <p className="text-black p-2 font-bold">
+                  Name <span className="text-red-500">*</span>
+                </p>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Ex: John Doe"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                  required
+                  autoFocus
+                />
+              </div>
+              <div>
+                <p className="text-black p-2 font-bold">
+                  Phone <span className="text-red-500">*</span>
+                </p>
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="10-digit phone number"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                  required
+                />
+              </div>
             </div>
 
-        </div>
-    )
-}
+            <div className="grid grid-cols-2 gap-8 justify-center book-inp">
+              <div>
+                <p className="text-black p-2 font-bold">Email</p>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="Ex: johndoe@gmail.com"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                />
+              </div>
+              <div>
+                <p className="text-black p-2 font-bold">
+                  Check in <span className="text-red-500">*</span>
+                </p>
+                <input
+                  type="date"
+                  name="checkin"
+                  value={form.checkin}
+                  onChange={handleChange}
+                  id="checkin"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-8 justify-center book-inp">
+              <div>
+                <p className="text-black p-2 font-bold">
+                  Check out <span className="text-red-500">*</span>
+                </p>
+                <input
+                  type="date"
+                  name="checkout"
+                  value={form.checkout}
+                  onChange={handleChange}
+                  id="checkout"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                  required
+                />
+              </div>
+              <div>
+                <p className="text-black p-2 font-bold">
+                  Rooms <span className="text-red-500">*</span>{" "}
+                  <span className="text-gray-700 font-normal tracking-wide">
+                    (₹8000/room)
+                  </span>
+                </p>
+                <input
+                  name="rooms"
+                  type="number"
+                  id="rooms"
+                  value={form.rooms}
+                  onChange={handleChange}
+                  placeholder="number of rooms"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-8 justify-center book-inp">
+              <div>
+                <p className="text-black p-2 font-bold">Adults</p>
+                <input
+                  type="number"
+                  name="adults"
+                  id="adults"
+                  value={form.adults}
+                  onChange={handleChange}
+                  placeholder="number of adults"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                />
+              </div>
+              <div>
+                <p className="text-black p-2 font-bold">Children</p>
+                <input
+                  type="number"
+                  name="children"
+                  id="children"
+                  value={form.children}
+                  onChange={handleChange}
+                  placeholder="number of children"
+                  className="border border-black w-[20rem] h-[3rem] px-3 outline-none rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className=" bg-green-50 w-[full] text-black booking-details">
+            <div className="flex flex-col gap-10 justify-center items-center p-10">
+              {alert.show && <Alert {...alert} />}
+              <h1 className="font-bold text-6xl mb-8">
+                Booking <span className="text-[#ffae00]">Details</span>
+              </h1>
+              <table className="border-collapse w-full grid items-center justify-center text-lg">
+                <tbody>
+                  <tr className="border-b border-black px-5">
+                    <th className="p-2 text-left">Name:</th>
+                    <td className="p-2">{form.name ? form.name : undefined}</td>
+                  </tr>
+                  <tr className="border-b border-black">
+                    <th className="p-2 text-left">Phone:</th>
+                    <td className="p-2">
+                      {form.phone ? form.phone : undefined}
+                    </td>
+                  </tr>
+                  <tr className="border-b border-black">
+                    <th className="p-2 text-left">Number of days:</th>
+                    <td className="p-2">{days ? days : undefined}</td>
+                  </tr>
+                  <tr className="text-4xl">
+                    <th className="p-2 text-left">Total:</th>
+                    <td className="p-2 font-bold">
+                      ₹{!days ? "0" : t_room_price}
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div className="pt-10 flex justify-center gap-10">
+            <button
+              type="reset"
+              className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-400 transition duration-200"
+            >
+              reset
+            </button>
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-400 transition duration-200"
+            >
+              {isLoading ? "Submitting..." : "Submit"}
+            </button>
+          </div>
+        </form>
+
+        {/* Booking Details */}
+      </div>
+    </div>
+  );
+};
 
 export default Booking;

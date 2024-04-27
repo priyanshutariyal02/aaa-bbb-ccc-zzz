@@ -118,14 +118,17 @@ const Home = () => {
             </p>
           </div>
           <div className="w-full h-[auto] flex justify-center mt-[3rem]">
-            <p className="bg-white shadow-xl rounded-lg card w-[30rem] h-[20rem] px-7 py-5 text-justify tracking-wide text-lg flex flex-col justify-center items-center event-section">
-              Event was organised on 20 & 21st of april 2024… AISEC a youth
-              runned organisation had their local congress called as trek local
-              conference(TLC)… the memebers had their conference for 20&21st of
-              april with their different agendas… had a lot many spaces(
-              speeches) from their heads or EBs they had a lot many activities
-              with a lot many dancing and talent hunt events…
-            </p>
+            <div className="w-[40rem] h-auto max-h-[40rem] flex flex-col gap-10 bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4 rounded-lg shadow-lg m-5">
+              <p className="text-white text-lg font-semibold tracking-wide text-center h-auto overflow-y-auto overflow-hidden p-4 break-words">
+                Event was organised on 20 & 21st of april 2024… AISEC a youth
+                runned organisation had their local congress called as trek
+                local conference(TLC)… the memebers had their conference for
+                20&21st of april with their different agendas… had a lot many
+                spaces( speeches) from their heads or EBs they had a lot many
+                activities with a lot many dancing and talent hunt events…
+                
+              </p>
+            </div>
           </div>
 
           {/* 
