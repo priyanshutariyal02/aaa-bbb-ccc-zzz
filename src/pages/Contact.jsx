@@ -127,7 +127,7 @@ const Contact = () => {
         <div className="w-full h-[auto] flex flex-col my-10 social-links">
           <p className="font-semibold">Direct contact:</p>
           <div className="w-full p-5 flex gap-[5rem]  items-center justify-start mt-[3rem] social-icons">
-            <a href="https://wa.me/917900409544" target="_blank">
+            <a href="https://wa.me/917906075750" target="_blank">
               <img
                 src={whatsapp}
                 alt="whatsapp"
@@ -135,7 +135,7 @@ const Contact = () => {
               />
             </a>
 
-            <a href="tel:917900409544">
+            <a href="tel:917906075750">
               <img
                 src={call}
                 alt="whatsapp"

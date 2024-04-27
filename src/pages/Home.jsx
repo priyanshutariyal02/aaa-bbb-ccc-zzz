@@ -499,7 +499,7 @@ const Home = () => {
             <span className="text-[#ffae00]">Links</span>
           </h1>
           <div className="w-full p-5 flex gap-[10rem]  items-center justify-center mt-[3rem] social-icons">
-            <a target="_blank" href="https://wa.me/917900409544">
+            <a target="_blank" href="https://wa.me/917906075750">
               <img
                 src={whatsapp}
                 alt="whatsapp"
