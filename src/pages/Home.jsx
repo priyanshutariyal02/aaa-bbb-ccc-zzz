@@ -123,10 +123,10 @@ const Home = () => {
             {/* <div className="w-[38rem] h-auto max-h-[45rem] items-center flex flex-col gap-10 bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4 rounded-lg shadow-lg m-5"> */}
             {/* <p className="text-white text-lg font-semibold tracking-wide text-center h-auto overflow-y-auto overflow-hidden p-4 break-words"> */}
             <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61558992059697&tabs=timeline%2Cevents&width=370&height=480&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
-              width="370"
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61558992059697&tabs=timeline%2Cevents&width=365&height=480&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
+              width="365"
               height="480"
-              className="border-none overflow-hidden p-[10px] shadow-lg bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4"
+              className="border-none overflow-hidden p-[10px] shadow-lg bg-gradient-to-r from-fuchsia-600 to-pink-600"
               frameborder="0"
               allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
