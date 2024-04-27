@@ -3,6 +3,22 @@ import HomeImg from "../components/HomeImg";
 import transfer from "../assets/icons/transfer.png";
 import resortImg from "../assets/resort1.avif";
 import { Link } from "react-router-dom";
+
+import {
+  g1,
+  g2,
+  g3,
+  g4,
+  g5,
+  g6,
+  g7,
+  g8,
+  g9,
+  g10,
+  g11,
+  g12,
+  g13,
+} from "../assets/img/images.js";
 import {
   bed,
   bath,
@@ -142,7 +158,7 @@ const Home = () => {
                 traveler whose
               </p>
               <p>
-                destination is Paris, Or a place that is known for a popular
+                destination is Hills, Or a place that is known for a popular
                 purpose.
               </p>
             </div>
@@ -151,9 +167,9 @@ const Home = () => {
             <div className="bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
-                  src={resortImg}
+                  src={g3}
                   alt=""
-                  className="transition duration-300 ease-in-out hover:scale-110"
+                  className="w-[25rem] h-[20rem] transition duration-300 ease-in-out hover:scale-110"
                 />
               </div>
 
@@ -197,9 +213,9 @@ const Home = () => {
             <div className="bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
-                  src={resortImg}
+                  src={g2}
                   alt=""
-                  className="transition duration-300 ease-in-out hover:scale-110"
+                  className=" w-[25rem] h-[20rem] transition duration-300 ease-in-out hover:scale-110"
                 />
               </div>
 
@@ -232,10 +248,10 @@ const Home = () => {
                   <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className="text-right my-2">
-                <Link to="/booking">
-                  <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
-                    Book
-                  </button>
+                  <Link to="/booking">
+                    <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
+                      Book
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -243,9 +259,9 @@ const Home = () => {
             <div className="bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
-                  src={resortImg}
+                  src={g9}
                   alt=""
-                  className="transition duration-300 ease-in-out hover:scale-110"
+                  className="w-[25rem] h-[20rem] transition duration-300 ease-in-out hover:scale-110"
                 />
               </div>
 
@@ -278,10 +294,10 @@ const Home = () => {
                   <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className="text-right my-2">
-                <Link to="/booking">
-                  <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
-                    Book
-                  </button>
+                  <Link to="/booking">
+                    <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
+                      Book
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -457,7 +473,10 @@ const Home = () => {
                 className="w-[4rem] h-[4rem] hover:scale-125 duration-200"
               />
             </a>
-            <a target="_blank" href="https://www.instagram.com">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/the_grand_view_resort/?igsh=MWticm01eXdxcTQ4dg%3D%3D&utm_source=qr"
+            >
               <img
                 src={instagram}
                 alt="instagram"
