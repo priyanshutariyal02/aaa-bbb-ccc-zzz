@@ -1,5 +1,19 @@
 import React from "react";
-import resort1 from "../assets/resort1.avif";
+import {
+  g1,
+  g2,
+  g3,
+  g4,
+  g5,
+  g6,
+  g7,
+  g8,
+  g9,
+  g10,
+  g11,
+  g12,
+  g13,
+} from "../assets/img/images.js";
 const About = () => {
   return (
     <>
@@ -8,7 +22,7 @@ const About = () => {
           <div className="flex w-full gap-[3rem] flex-row-reverse items-center about-section">
             <div className="relative overflow-hidden w-[50%] about-container">
               <img
-                src={resort1}
+                src={g8}
                 alt="About Us"
                 className="rounded-md shadow-lg transition duration-300 ease-in-out hover:scale-110"
               />
