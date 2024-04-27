@@ -117,12 +117,12 @@ const Booking = () => {
 
   const days = calculateNumberOfDays(form.checkin, form.checkout);
 
-  const discount = 1000;
+  const discount = 1000 * days;
   const one_room = 8000;
   let t_room_price = 0;
 
   if (days >= 3) {
-    t_room_price = one_room * days * form.rooms - discount * days;
+    t_room_price = one_room * days * form.rooms - discount;
   } else {
     t_room_price = one_room * days * form.rooms;
   }
