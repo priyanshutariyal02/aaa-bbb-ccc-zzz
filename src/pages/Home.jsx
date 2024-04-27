@@ -32,6 +32,7 @@ import {
   youtube,
   facebook,
 } from "../assets/icons/icon.js";
+import Feedback from "../components/feedback/Feedback.jsx";
 const Home = () => {
   const inputs =
     "border border-black w-[15rem] h-[3rem] px-3 outline-none rounded-lg";
@@ -113,7 +114,8 @@ const Home = () => {
         <div className="w-full h-[auto] my-11">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
-              <span className="text-gray-800">Events & Blogs</span>
+              <span className="text-gray-800">Events &</span>{" "}
+              <span className="text-[#ffae00]">Blogs</span>
             </h1>
             <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-700 px-4 md:px-0">
               Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
@@ -140,7 +142,8 @@ const Home = () => {
           {/* Special offer */}
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[4.5rem] special-offer">
-              Special Discount
+              <span className="text-gray-800">Special</span>{" "}
+              <span className="text-[#ffae00]">Discount</span>
             </h1>
             <div className="text-center my-2 text-lg font-[400] special-offer-para">
               <p>
@@ -346,7 +349,7 @@ const Home = () => {
           <div className="flex flex-col justify-center items-center my-11 gap-10 md:flex-row md:justify-center md:items-center md-device">
             <div className="bg-white shadow-xl rounded-lg card w-[22rem] md:w-[25rem] h-[20rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105">
               <h2 className="text-[1.7rem] md:text-[29px] font-bold mb-4">
-                <span className="text-gray-800">Unparalleled</span>
+                <span className="text-gray-800">Unparalleled</span>{" "}
                 <span className="text-[#ffae00]">Amenities</span>
               </h2>
               <p className="text-lg font-[400] px-4 text-center text-gray-700">
@@ -357,7 +360,7 @@ const Home = () => {
             </div>
             <div className="bg-white shadow-xl rounded-lg card w-[22rem] md:w-[25rem] h-[20rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105">
               <h2 className="text-[1.7rem] md:text-[2rem] font-bold mb-4 text-[#ffae00]">
-                <span className="text-gray-800">Breathtaking</span>
+                <span className="text-gray-800">Breathtaking</span>{" "}
                 <span className="text-[#ffae00]">Scenery</span>
               </h2>
               <p className="text-lg font-[400] px-4 text-center text-gray-700">
@@ -368,7 +371,7 @@ const Home = () => {
             </div>
             <div className="bg-white shadow-xl rounded-lg card w-[22rem] md:w-[25rem] h-[20rem] flex flex-col justify-center items-center transition-all duration-300 ease-in-out transform hover:scale-105">
               <h2 className="text-[1.7rem] md:text-[2rem] font-bold mb-4 text-[#ffae00]">
-                <span className="text-gray-800">Exceptional</span>
+                <span className="text-gray-800">Exceptional</span>{" "}
                 <span className="text-[#ffae00]">Service</span>
               </h2>
               <p className="text-lg font-[400] px-4 text-center text-gray-700">
@@ -384,7 +387,8 @@ const Home = () => {
         <div className="w-full h-[auto] my-8">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-center font-bold text-[3.5rem] md:text-[4.5rem] text-gray-800">
-              Amenities & Activities
+              <span className="text-gray-800">Amenities &</span>{" "}
+              <span className="text-[#ffae00]">Activities</span>
             </h2>
             <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-600 px-4 md:px-0">
               Discover the endless possibilities for relaxation and adventure at
@@ -490,7 +494,10 @@ const Home = () => {
         <hr className="mt-[4rem] border-gray-400 w-[80%] mx-auto" />
         {/* Social media */}
         <div className="w-full h-[auto] flex flex-col justify-center items-center my-11 p-6 social-links">
-          <h1 className="font-bold text-[4rem]">Social Links</h1>
+          <h1 className="font-bold text-[4rem]">
+            <span className="text-gray-800">Social</span>{" "}
+            <span className="text-[#ffae00]">Links</span>
+          </h1>
           <div className="w-full p-5 flex gap-[10rem]  items-center justify-center mt-[3rem] social-icons">
             <a target="_blank" href="https://wa.me/917900409544">
               <img
@@ -509,7 +516,10 @@ const Home = () => {
                 className="w-[4rem] h-[4rem] hover:scale-125 duration-200"
               />
             </a>
-            <a target="_blank" href="https://www.facebook.com">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/profile.php?id=61558992059697"
+            >
               <img
                 src={facebook}
                 alt="facebook"
@@ -524,6 +534,9 @@ const Home = () => {
                 className="w-[4rem] h-[4rem] hover:scale-125 duration-200"
               />
             </a>
+          </div>
+          <div className="w-full p-5 flex gap-[10rem]  items-center justify-center mt-[3rem]">
+            <Feedback />
           </div>
         </div>
       </div>
