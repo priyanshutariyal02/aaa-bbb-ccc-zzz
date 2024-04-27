@@ -126,7 +126,7 @@ const Home = () => {
               src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61558992059697&tabs=timeline%2Cevents&width=365&height=480&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
               width="365"
               height="480"
-              className="border-none overflow-hidden p-[10px] shadow-lg bg-gradient-to-r bg-[#ffae00]"
+              className="border-none overflow-hidden p-[10px] shadow-lg bg-gradient-to-r bg-[#ffae00] rounded-2xl"
               frameborder="0"
               allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
