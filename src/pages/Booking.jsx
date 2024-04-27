@@ -20,6 +20,20 @@ const Booking = () => {
     children: "",
   });
 
+  const handleReset = () => {
+    window.scrollTo(0, 0);
+    setForm({
+      name: "",
+      phone: "",
+      email: "",
+      checkin: "",
+      checkout: "",
+      rooms: "",
+      adults: "",
+      children: "",
+    });
+  };
+
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
@@ -103,9 +117,15 @@ const Booking = () => {
 
   const days = calculateNumberOfDays(form.checkin, form.checkout);
 
+  const discount = 1000;
   const one_room = 8000;
-  const t_room_price = one_room * days * form.rooms;
+  let t_room_price = 0;
 
+  if (days >= 3) {
+    t_room_price = one_room * days * form.rooms - discount * days;
+  } else {
+    t_room_price = one_room * days * form.rooms;
+  }
   return (
     <div className="w-full min-h-[100vh] pt-[10rem] ">
       <div className="w-full h-full min-h-[100vh] flex justify-center booking-page">
@@ -115,6 +135,7 @@ const Booking = () => {
           onSubmit={handleSubmit}
           className="w-[60%] pb-[3rem] min-h-[100vh] bg-white mb-[3rem] shadow-xl"
         >
+          <h1 className="text-center text-[4rem] py-5 font-bold">Booking</h1>
           <div className="w-full flex flex-col gap-10 justify-center items-center p-10">
             <div className="grid grid-cols-2 gap-8 justify-center book-inp">
               <div>
@@ -198,7 +219,7 @@ const Booking = () => {
                 <p className="text-black p-2 font-bold">
                   Rooms <span className="text-red-500">*</span>{" "}
                   <span className="text-gray-700 font-normal tracking-wide">
-                    (₹8000/room)
+                    (₹8000+taxes/night)
                   </span>
                 </p>
                 <input
@@ -241,11 +262,12 @@ const Booking = () => {
               </div>
             </div>
           </div>
+          <hr className="w-[80%] mx-auto my-5 border-gray-400" />
 
-          <div className=" bg-green-50 w-[full] text-black booking-details">
+          <div className="w-[full] text-black booking-details">
             <div className="flex flex-col gap-10 justify-center items-center p-10">
               {alert.show && <Alert {...alert} />}
-              <h1 className="font-bold text-6xl mb-8">
+              <h1 className="font-semibold text-5xl mb-8">
                 Booking <span className="text-[#ffae00]">Details</span>
               </h1>
               <table className="border-collapse w-full grid items-center justify-center text-lg">
@@ -274,9 +296,11 @@ const Booking = () => {
               </table>
             </div>
           </div>
+          <hr className="w-[80%] mx-auto my-5 border-gray-400" />
           <div className="pt-10 flex justify-center gap-10">
             <button
               type="reset"
+              onClick={handleReset}
               className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-400 transition duration-200"
             >
               reset

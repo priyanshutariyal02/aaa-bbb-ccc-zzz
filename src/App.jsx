@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Booking from "./pages/Booking";
 // import Blog from "./pages/Blog";
 // import Proceed from "./pages/Proceed";
-function App(props) {
+function App() {
   return (
     <main className="main-cintainer bg-slate-300/20">
       <Router>

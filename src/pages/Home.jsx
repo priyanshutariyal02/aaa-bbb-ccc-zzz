@@ -23,6 +23,8 @@ import {
   bed,
   bath,
   food,
+  breakfast,
+  night,
   bedroom,
   location,
   whatsapp,
@@ -118,35 +120,20 @@ const Home = () => {
             </p>
           </div>
           <div className="w-full h-[auto] flex justify-center mt-[3rem]">
-            <div className="w-[40rem] h-auto max-h-[40rem] flex flex-col gap-10 bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4 rounded-lg shadow-lg m-5">
-              <p className="text-white text-lg font-semibold tracking-wide text-center h-auto overflow-y-auto overflow-hidden p-4 break-words">
-                Event was organised on 20 & 21st of april 2024… AISEC a youth
-                runned organisation had their local congress called as trek
-                local conference(TLC)… the memebers had their conference for
-                20&21st of april with their different agendas… had a lot many
-                spaces( speeches) from their heads or EBs they had a lot many
-                activities with a lot many dancing and talent hunt events…
-                
-              </p>
-            </div>
+            {/* <div className="w-[38rem] h-auto max-h-[45rem] items-center flex flex-col gap-10 bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4 rounded-lg shadow-lg m-5"> */}
+            {/* <p className="text-white text-lg font-semibold tracking-wide text-center h-auto overflow-y-auto overflow-hidden p-4 break-words"> */}
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61558992059697&tabs=timeline%2Cevents&width=380&height=600&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
+              width="380"
+              height="480"
+              className="border:none overflow-hidden"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+            {/* </p> */}
+            {/* </div> */}
           </div>
-
-          {/* 
-          <div className="flex flex-col justify-center items-center my-11 gap-10 md:flex-row md:justify-center md:items-center md-device">
-            <div className="bg-white italic shadow-xl rounded-lg card w-[30rem] h-[25rem] flex flex-col justify-center items-center event-section overflow-hidden">
-              <p className="text-lg font-semibold px-4 text-center text-gray-700">
-                Dive into an unforgettable journey at AIESEC's TLC Local
-                Congress 2024! 🌟 Mark your calendars for April 20th & 21st and
-                join us for two action-packed days of empowerment and fun.
-                Experience engaging speeches and diverse agendas led by our
-                passionate heads and EBs. From inspiring talks to thrilling
-                talent hunts, there's something for everyone. Dance the night
-                away and showcase your talents in our vibrant talent hunt
-                events. Don't miss out on this incredible opportunity to
-                connect, learn, and grow with us!
-              </p>
-            </div>
-          </div> */}
         </div>
 
         <div className="w-full h-[auto]">
@@ -167,42 +154,54 @@ const Home = () => {
             </div>
           </div>
           <div className="flex justify-center items-center my-11 gap-10 md-device">
-            <div className="bg-white shadow-xl rounded-lg card">
+            <div className="w-[25rem] bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
                   src={g3}
                   alt=""
-                  className="w-[25rem] h-[20rem] transition duration-300 ease-in-out hover:scale-110"
+                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110"
                 />
               </div>
 
-              <div className="p-10">
+              <div className="p-5">
                 <div className="flex justify-between items-center">
-                  <p className="text-[1.5rem] font-bold">₹5000</p>
+                  <p className="text-[1.5rem] font-bold tracking-wide">
+                    ₹21000{" "}
+                    <span className="line-through text-lg font-normal text-gray-500">
+                      ₹24000
+                    </span>
+                  </p>
                   <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
                     offer
                   </p>
                 </div>
+                <p className="text-md tracking-wide text-gray-600 ">
+                  (+Exclusive of all taxes)
+                </p>
                 <div className="grid grid-cols-2 gap-4 p-4 text-center font-[500]">
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bed} alt="bed" className="w-[4rem]" />2 Beds
+                    <img src={bed} alt="bed" className="w-[3rem] p-1" />1 Master
+                    Bed
                   </p>
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bath} alt="bath" className="w-[4rem]" />1 Bath
+                    <img src={bath} alt="bath" className="w-[3rem] p-1" />1
+                    Bathroom
                   </p>
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={food} alt="food" className="w-[4rem]" />
-                    Food
+                    <img src={breakfast} alt="food" className="w-[3rem] p-1" />
+                    Breakfast
                   </p>
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bedroom} alt="bedroom" className="w-[4rem]" />
-                    Bedroom
+                    <img src={night} alt="bedroom" className="w-[3rem] p-1" />3
+                    Night
                   </p>
                 </div>
 
                 <div className="flex gap-2 items-center p-4">
                   <img src={location} alt="location" className="w-[20px]" />
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <a href="https://www.google.com/maps?q=30.4440250396729,78.2041549682617">
+                    <p>buranskhanda(dhanualti) district dehradun</p>
+                  </a>
                 </div>
                 <div className="text-right my-2">
                   <Link to="/booking">
@@ -213,88 +212,112 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white shadow-xl rounded-lg card">
-              <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
-                <img
-                  src={g2}
-                  alt=""
-                  className=" w-[25rem] h-[20rem] transition duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-
-              <div className="p-10">
-                <div className="flex justify-between items-center">
-                  <p className="text-[1.5rem] font-bold">₹5000</p>
-                  <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
-                    offer
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 gap-4 p-4 text-center font-[500]">
-                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bed} alt="bed" className="w-[4rem]" />2 Beds
-                  </p>
-                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bath} alt="bath" className="w-[4rem]" />1 Bath
-                  </p>
-                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={food} alt="food" className="w-[4rem]" />
-                    Food
-                  </p>
-                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bedroom} alt="bedroom" className="w-[4rem]" />
-                    Bedroom
-                  </p>
-                </div>
-
-                <div className="flex gap-2 items-center p-4">
-                  <img src={location} alt="location" className="w-[20px]" />
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div className="text-right my-2">
-                  <Link to="/booking">
-                    <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
-                      Book
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white shadow-xl rounded-lg card">
+            <div className="w-[25rem] bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
                   src={g9}
                   alt=""
-                  className="w-[25rem] h-[20rem] transition duration-300 ease-in-out hover:scale-110"
+                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110"
                 />
               </div>
 
-              <div className="p-10">
+              <div className="p-5">
                 <div className="flex justify-between items-center">
-                  <p className="text-[1.5rem] font-bold">₹5000</p>
+                  <p className="text-[1.5rem] font-bold tracking-wide">
+                    ₹35000{" "}
+                    <span className="line-through text-lg font-normal text-gray-500">
+                      ₹40000
+                    </span>
+                  </p>
                   <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
                     offer
                   </p>
                 </div>
+                <p className="text-md tracking-wide text-gray-600 ">
+                  (+Exclusive of all taxes)
+                </p>
                 <div className="grid grid-cols-2 gap-4 p-4 text-center font-[500]">
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bed} alt="bed" className="w-[4rem]" />2 Beds
+                    <img src={bed} alt="bed" className="w-[3rem] p-1" />1 Master
+                    Bed
                   </p>
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bath} alt="bath" className="w-[4rem]" />1 Bath
+                    <img src={bath} alt="bath" className="w-[3rem] p-1" />1
+                    Bathroom
                   </p>
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={food} alt="food" className="w-[4rem]" />
-                    Food
+                    <img src={breakfast} alt="food" className="w-[3rem] p-1" />
+                    Breakfast
                   </p>
                   <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                    <img src={bedroom} alt="bedroom" className="w-[4rem]" />
-                    Bedroom
+                    <img src={night} alt="bedroom" className="w-[3rem] p-1" />5
+                    Night
                   </p>
                 </div>
 
                 <div className="flex gap-2 items-center p-4">
                   <img src={location} alt="location" className="w-[20px]" />
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <a href="https://www.google.com/maps?q=30.4440250396729,78.2041549682617">
+                    <p>buranskhanda(dhanualti) district dehradun</p>
+                  </a>
+                </div>
+                <div className="text-right my-2">
+                  <Link to="/booking">
+                    <button className="bg-[#ffae00] text-white px-6 py-2 rounded-xl hover:bg-[#ffc352] duration-200">
+                      Book
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="w-[25rem] bg-white shadow-xl rounded-lg card">
+              <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
+                <img
+                  src={g2}
+                  alt=""
+                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110"
+                />
+              </div>
+
+              <div className="p-5">
+                <div className="flex justify-between items-center">
+                  <p className="text-[1.5rem] font-bold tracking-wide">
+                    ₹48000{" "}
+                    <span className="line-through text-lg font-normal text-gray-500">
+                      ₹56000
+                    </span>
+                  </p>
+                  <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
+                    offer
+                  </p>
+                </div>
+                <p className="text-md tracking-wide text-gray-600 ">
+                  (+Exclusive of all taxes)
+                </p>
+                <div className="grid grid-cols-2 gap-4 p-4 text-center font-[500]">
+                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
+                    <img src={bed} alt="bed" className="w-[3rem] p-1" />1 Master
+                    Bed
+                  </p>
+                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
+                    <img src={bath} alt="bath" className="w-[3rem] p-1" />1
+                    Bathroom
+                  </p>
+                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
+                    <img src={breakfast} alt="food" className="w-[3rem] p-1" />
+                    Breakfast
+                  </p>
+                  <p className="bg-slate-100 shadow-lg rounded-lg py-2">
+                    <img src={night} alt="bedroom" className="w-[3rem] p-1" />7
+                    Night
+                  </p>
+                </div>
+
+                <div className="flex gap-2 items-center p-4">
+                  <img src={location} alt="location" className="w-[20px]" />
+                  <a href="https://www.google.com/maps?q=30.4440250396729,78.2041549682617">
+                    <p>buranskhanda(dhanualti) district dehradun</p>
+                  </a>
                 </div>
                 <div className="text-right my-2">
                   <Link to="/booking">
@@ -420,7 +443,7 @@ const Home = () => {
                         •
                       </span>
                       <p className="text-gray-600 text-[1.1rem] font-medium a-and-a-p">
-                        Exciting Water Sports
+                        Exciting Sports
                       </p>
                     </div>
                   </td>

@@ -8,5 +8,7 @@ import food from '../icons/food.png'
 import bedroom from '../icons/bedroom.png'
 import location from '../icons/location.png'
 import call from '../icons/call.png'
+import breakfast from '../icons/breakfast.png'
+import night from '../icons/night.png'
 
-export { instagram, facebook, youtube, whatsapp, bed, bath, food, bedroom, location, call};
+export { instagram, facebook, youtube, whatsapp, bed, bath, food, bedroom, location, call, breakfast, night };
