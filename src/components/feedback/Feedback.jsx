@@ -8,7 +8,7 @@ const Feedback = () => {
         sandbox="allow-scripts allow-same-origin"
         layout="fixed-height"
         width="100%"
-        height="360"
+        height="380"
         resizable="resizable"
       >
         <span overflow></span>
