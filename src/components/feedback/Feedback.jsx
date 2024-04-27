@@ -3,10 +3,16 @@ import React from "react";
 const Feedback = () => {
   return (
     <>
-      <div
-        class="elfsight-app-7be3f957-b3ab-4bc1-939f-4201cd953209"
-        data-elfsight-app-lazy
-      ></div>
+      <iframe
+        src="https://cdn.trustindex.io/amp-widget.html#ac2227f280519889e8063ad9067"
+        sandbox="allow-scripts allow-same-origin"
+        layout="fixed-height"
+        width="100%"
+        height="360"
+        resizable="resizable"
+      >
+        <span overflow></span>
+      </iframe>
     </>
   );
 };

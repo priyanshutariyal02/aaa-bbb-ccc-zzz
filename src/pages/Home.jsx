@@ -162,7 +162,7 @@ const Home = () => {
                 <img
                   src={g3}
                   alt=""
-                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110"
+                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110 object-center"
                 />
               </div>
 
@@ -218,7 +218,7 @@ const Home = () => {
             <div className="w-[25rem] bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
-                  src={g9}
+                  src={g3}
                   alt=""
                   className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110"
                 />
@@ -276,9 +276,9 @@ const Home = () => {
             <div className="w-[25rem] bg-white shadow-xl rounded-lg card">
               <div className="w-[25rem] h-[20rem] relative overflow-hidden rounded-t-lg card-img">
                 <img
-                  src={g2}
+                  src={g3}
                   alt=""
-                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110"
+                  className="w-[full] h-[25rem] object-cover transition duration-300 ease-in-out hover:scale-110 object-bottom"
                 />
               </div>
 
@@ -491,6 +491,19 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="w-full p-5 flex gap-[5rem] flex-col  items-center justify-center mt-[3rem]">
+          <h1 className="font-bold text-[4rem]">
+            <span className="text-gray-800">Rivews</span>
+          </h1>
+          <Feedback />
+          <a
+            href="https://www.facebook.com/profile.php?id=61558992059697&sk=reviews" target="_blank"
+            className="bg-blue-500 py-4 px-8 rounded-md text-white font-bold text-[1rem] hover:bg-blue-600 duration-200"
+          >
+            Write a Review
+          </a>
+        </div>
+
         <hr className="mt-[4rem] border-gray-400 w-[80%] mx-auto" />
         {/* Social media */}
         <div className="w-full h-[auto] flex flex-col justify-center items-center my-11 p-6 social-links">
@@ -534,9 +547,6 @@ const Home = () => {
                 className="w-[4rem] h-[4rem] hover:scale-125 duration-200"
               />
             </a>
-          </div>
-          <div className="w-full p-5 flex gap-[10rem]  items-center justify-center mt-[3rem]">
-            <Feedback />
           </div>
         </div>
       </div>
