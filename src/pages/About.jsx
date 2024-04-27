@@ -28,19 +28,22 @@ const About = () => {
               />
             </div>
             <div className="w-[50%] about-container">
-              <h2 className="text-[4rem] font-semibold mb-4">About Us</h2>
+              <h2 className="text-[4rem] font-semibold mb-4">
+                <span className="text-gray-800">About</span>{" "}
+                <span className="text-[#ffae00]">Us</span>
+              </h2>
               <p className="text-gray-700 leading-relaxed mb-6 py-5 text-[20px] text-justify tracking-wide  about-para">
-                Welcome to Grand View Resort, nestled between the
-                picturesque towns of Dhanaulti and the majestic Queen of Hills,
-                Mussoorie! Our prime location offers breathtaking vistas of the
-                Himalayas at dawn and the tranquil Doon Valley by night. Each
-                cottage provides a cozy retreat with spacious bedroom areas
-                measuring 15x12 feet, complete with modern washroom facilities.
-                Step onto your private balcony, measuring 5x4 feet, and immerse
-                yourself in the serene surroundings, perfect for unwinding after
-                a day of exploration. Experience comfort and tranquility with
-                every stay at Grand View Resort, where nature's beauty awaits
-                just beyond your doorstep.
+                Welcome to Grand View Resort, nestled between the picturesque
+                towns of Dhanaulti and the majestic Queen of Hills, Mussoorie!
+                Our prime location offers breathtaking vistas of the Himalayas
+                at dawn and the tranquil Doon Valley by night. Each cottage
+                provides a cozy retreat with spacious bedroom areas measuring
+                15x12 feet, complete with modern washroom facilities. Step onto
+                your private balcony, measuring 5x4 feet, and immerse yourself
+                in the serene surroundings, perfect for unwinding after a day of
+                exploration. Experience comfort and tranquility with every stay
+                at Grand View Resort, where nature's beauty awaits just beyond
+                your doorstep.
               </p>
               <a
                 href="/"

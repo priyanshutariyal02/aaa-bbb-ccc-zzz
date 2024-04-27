@@ -22,7 +22,8 @@ const Gallery = () => {
   return (
     <div className="w-full min-h-[100vh] pt-[10rem]">
       <div className="flex flex-col justify-center items-center">
-        <h1 className="font-bold text-[4.5rem] text-center">Our Gallery</h1>
+        <h1 className="font-bold text-[4.5rem] text-center"><span className="text-gray-800">Our</span>{" "}
+              <span className="text-[#ffae00]">Gallery</span></h1>
         <div className="text-center mb-8 my-2 text-lg font-[400] gallery-para">
           <p>The gallery is about looking at a thing of beauty;</p>
           <p>The purpose of the activity is an aesthetic response.</p>

@@ -493,7 +493,7 @@ const Home = () => {
 
         <div className="w-full p-5 flex gap-[5rem] flex-col  items-center justify-center mt-[3rem]">
           <h1 className="font-bold text-[4rem]">
-            <span className="text-gray-800">Rivews</span>
+            <span className="text-gray-800">Reviws</span>
           </h1>
           <Feedback />
           <a
