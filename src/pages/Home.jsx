@@ -493,14 +493,14 @@ const Home = () => {
 
         <div className="w-full p-5 flex gap-[5rem] flex-col  items-center justify-center mt-[3rem]">
           <h1 className="font-bold text-[4rem]">
-            <span className="text-gray-800">Reviws</span>
+            <span className="text-gray-800">Reviews</span>
           </h1>
           <Feedback />
           <a
             href="https://www.facebook.com/profile.php?id=61558992059697&sk=reviews" target="_blank"
             className="bg-blue-500 py-4 px-8 rounded-md text-white font-bold text-[1rem] hover:bg-blue-600 duration-200"
           >
-            Write a Review
+            More Reviews
           </a>
         </div>
 
