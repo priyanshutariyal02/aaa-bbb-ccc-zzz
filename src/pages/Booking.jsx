@@ -267,10 +267,10 @@ const Booking = () => {
           <div className="w-[full] text-black booking-details">
             <div className="flex flex-col gap-10 justify-center items-center p-10">
               {alert.show && <Alert {...alert} />}
-              <h1 className="font-semibold text-5xl mb-8">
+              <h1 className="font-semibold text-5xl mb-8 tracking-wider">
                 Booking <span className="text-[#ffae00]">Details</span>
               </h1>
-              <table className="border-collapse w-full grid items-center justify-center text-lg">
+              <table className="border-collapse w-full grid items-center justify-center text-lg tracking-wider">
                 <tbody>
                   <tr className="border-b border-black px-5">
                     <th className="p-2 text-left">Name:</th>
@@ -283,13 +283,21 @@ const Booking = () => {
                     </td>
                   </tr>
                   <tr className="border-b border-black">
-                    <th className="p-2 text-left">Number of days:</th>
-                    <td className="p-2">{days ? days : undefined}</td>
+                    <th className="p-2 text-left">No. of night:</th>
+                    <td className="p-2">
+                      {days > 0 ? (
+                        days
+                      ) : (
+                        <p className="text-[red] font-semibold">
+                          Enter valid dates
+                        </p>
+                      )}
+                    </td>
                   </tr>
-                  <tr className="text-4xl">
-                    <th className="p-2 text-left">Total:</th>
-                    <td className="p-2 font-bold">
-                      ₹{!days ? "0" : t_room_price}
+                  <tr className="text-4xl tracking-wide">
+                    <th className="p-2 text-left font-semibold">Total:</th>
+                    <td className="p-2 font-semibold">
+                      ₹{days && t_room_price > 0 ? t_room_price : "0"}
                     </td>
                   </tr>
                 </tbody>

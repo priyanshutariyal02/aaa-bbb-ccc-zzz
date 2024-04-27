@@ -48,9 +48,13 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-4">Contact Us</h3>
           <p className="text-gray-400 mb-2">BurasKhanda Dehradun</p>
-          <p className="text-gray-400 mb-2">Phone: (123) 456-7890</p>
           <p className="text-gray-400 mb-2">
-            Email: thegrandviewresort@gmail.com
+            Phone: <a href="tel:917906075750">(+91)-7906075750</a>
+          </p>
+          <p className="text-gray-400 mb-2">
+            <a href="mailto:thegrandviewresort@gmail.com">
+              Email: thegrandviewresort@gmail.com
+            </a>
           </p>
           <div className="flex space-x-4 mt-4">
             <a

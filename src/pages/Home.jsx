@@ -174,7 +174,7 @@ const Home = () => {
                       ₹24000
                     </span>
                   </p>
-                  <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
+                  <p className="text-yellow-300 border-2 font-semibold border-yellow-300 px-2 rounded-xl">
                     offer
                   </p>
                 </div>
@@ -232,7 +232,7 @@ const Home = () => {
                       ₹40000
                     </span>
                   </p>
-                  <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
+                  <p className="text-yellow-300 border-2 font-semibold border-yellow-300 px-2 rounded-xl">
                     offer
                   </p>
                 </div>
@@ -290,7 +290,7 @@ const Home = () => {
                       ₹56000
                     </span>
                   </p>
-                  <p className="text-yellow-300 border border-yellow-300 px-2 rounded-xl">
+                  <p className="text-yellow-300 border-2 font-semibold border-yellow-300 px-2 rounded-xl">
                     offer
                   </p>
                 </div>
