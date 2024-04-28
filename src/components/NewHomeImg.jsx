@@ -35,7 +35,7 @@ const NewHomeImg = () => {
               <Link to="/booking">
                 <button
                   type="submit"
-                  className="bg-[#ffae00] text-white font-semibold px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200"
+                  className="bg-[#ffae00] text-white font-semibold px-10 py-2 rounded-lg hover:bg-[#ffc445] transition duration-200"
                 >
                   Quick Booking
                 </button>
@@ -59,7 +59,7 @@ const NewHomeImg = () => {
               <Link to="/booking">
                 <button
                   type="submit"
-                  className="bg-[#ffae00] text-white font-semibold px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200"
+                  className="bg-[#ffae00] text-white font-semibold px-10 py-2 rounded-lg hover:bg-[#ffc445] transition duration-200"
                 >
                   Quick Booking
                 </button>
@@ -84,7 +84,7 @@ const NewHomeImg = () => {
               <Link to="/booking">
                 <button
                   type="submit"
-                  className="bg-[#ffae00] text-white font-semibold px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200"
+                  className="bg-[#ffae00] text-white font-semibold px-10 py-2 rounded-lg hover:bg-[#ffc445] transition duration-200"
                 >
                   Quick Booking
                 </button>
@@ -108,7 +108,7 @@ const NewHomeImg = () => {
               <Link to="/booking">
                 <button
                   type="submit"
-                  className="bg-[#ffae00] text-white font-semibold px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200"
+                  className="bg-[#ffae00] text-white font-semibold px-10 py-2 rounded-lg hover:bg-[#ffc445] transition duration-200"
                 >
                   Quick Booking
                 </button>
@@ -132,7 +132,7 @@ const NewHomeImg = () => {
               <Link to="/booking">
                 <button
                   type="submit"
-                  className="bg-[#ffae00] text-white font-semibold px-10 py-3 rounded-lg hover:bg-[#ffc445] transition duration-200"
+                  className="bg-[#ffae00] text-white font-semibold px-10 py-2 rounded-lg hover:bg-[#ffc445] transition duration-200"
                 >
                   Quick Booking
                 </button>
