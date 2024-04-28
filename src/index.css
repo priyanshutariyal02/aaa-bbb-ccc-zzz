@@ -65,7 +65,7 @@ footer {
     margin-top: auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
 
     header .nav-btn {
         visibility: visible;
@@ -99,6 +99,14 @@ footer {
         gap: 3rem;
     }
 
+    .place-section{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .place-section .place-card-img{
+        width: 18rem;
+        height: 15rem;
+    }
     .home-logo {
         width: 100px;
         height: 55px;
