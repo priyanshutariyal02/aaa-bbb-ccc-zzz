@@ -49,20 +49,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <div className="w-full flex flex-col items-center">
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Welcome to the
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  <span className="text-[#ffee00]">Grand</span> View
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Resort
-                </h1>
-              </div>
-              <p className="font-semibold text-lg italic lowercase">
-                Stay here for peace and nautre, make memories that last forever.
-                Come to The Grand View Resort for an unforgettable experience.
+              <p className="font-semibold text-2xl italic lowercase">
+                Loving the cozy vibes in this room with tables and chairs,
+                perfect for a coffee break or a meal with friends!
               </p>
             </div>
 
@@ -84,20 +73,10 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <div className="w-full flex flex-col items-center">
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Welcome to the
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  <span className="text-[#ffee00]">Grand</span> View
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Resort
-                </h1>
-              </div>
               <p className="font-semibold text-lg italic lowercase">
-                Stay here for peace and nautre, make memories that last forever.
-                Come to The Grand View Resort for an unforgettable experience.
+                Just woke up to this breathtaking view of the mountain range
+                from the forest. Feeling so grateful to be surrounded by such
+                natural beauty.
               </p>
             </div>
 
@@ -119,20 +98,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <div className="w-full flex flex-col items-center">
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Welcome to the
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  <span className="text-[#ffee00]">Grand</span> View
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Resort
-                </h1>
-              </div>
               <p className="font-semibold text-lg italic lowercase">
-                Stay here for peace and nautre, make memories that last forever.
-                Come to The Grand View Resort for an unforgettable experience.
+                When you find your tribe, you just have to snap a pic. Smiling
+                faces and good vibes all around.
               </p>
             </div>
 
@@ -154,20 +122,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <div className="w-full flex flex-col items-center">
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Welcome to the
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  <span className="text-[#ffee00]">Grand</span> View
-                </h1>
-                <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">
-                  Resort
-                </h1>
-              </div>
               <p className="font-semibold text-lg italic lowercase">
-                Stay here for peace and nautre, make memories that last forever.
-                Come to The Grand View Resort for an unforgettable experience.
+                Smiling faces, stylish clothing, and endless laughter Feeling so
+                lucky to have been a part of such a fun day.
               </p>
             </div>
 
