@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
-import HomeImg from "../components/HomeImg";
-import transfer from "../assets/icons/transfer.png";
-import resortImg from "../assets/resort1.avif";
+import NewHomeImg from "../components/NewHomeImg.jsx";
+// import HomeImg from "../components/HomeImg";
+// import transfer from "../assets/icons/transfer.png";
+// import resortImg from "../assets/resort1.avif";
 import { Link } from "react-router-dom";
 
 import {
@@ -45,7 +46,8 @@ const Home = () => {
   return (
     <>
       <div className="bg-slate-300/20 flex flex-col justify-center items-center">
-        <HomeImg />
+        {/* <HomeImg /> */}
+        <NewHomeImg />
 
         {/* comment off */}
         <>

@@ -19,8 +19,8 @@ const HomeImg = () => {
         </h1>
         <h1 className="shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]">Resort</h1>
         <p className="font-semibold text-lg italic lowercase">
-          Stay here once, make memories that last forever. Come to The Grand
-          View Resort for an unforgettable experience.
+          Stay here for peace and nautre, make memories that last forever. Come
+          to The Grand View Resort for an unforgettable experience.
         </p>
       </div>
 
