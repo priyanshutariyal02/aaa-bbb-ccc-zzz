@@ -119,6 +119,12 @@ footer {
         font-size: 2rem;
     }
 
+    .home-heading p{
+        font-size: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
     .hotel-rev {
         width: 85%;
     }

@@ -111,35 +111,8 @@ const Home = () => {
                 */}
         </>
 
-        <div className="w-full h-[auto] my-11">
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
-              <span className="text-gray-800">Events &</span>{" "}
-              <span className="text-[#ffae00]">Blogs</span>
-            </h1>
-            <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-700 px-4 md:px-0">
-              Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
-            </p>
-          </div>
-          <div className="w-full h-[auto] flex justify-center mt-[3rem]">
-            {/* <div className="w-[38rem] h-auto max-h-[45rem] items-center flex flex-col gap-10 bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4 rounded-lg shadow-lg m-5"> */}
-            {/* <p className="text-white text-lg font-semibold tracking-wide text-center h-auto overflow-y-auto overflow-hidden p-4 break-words"> */}
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61558992059697&tabs=timeline%2Cevents&width=365&height=480&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
-              width="365"
-              height="480"
-              className="border-none overflow-hidden p-[10px] shadow-lg bg-gradient-to-r bg-[#ffae00] rounded-2xl"
-              frameborder="0"
-              allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
-            {/* </p> */}
-            {/* </div> */}
-          </div>
-        </div>
-
-        <div className="w-full h-[auto]">
-          {/* Special offer */}
+        {/* Special offer */}
+        <div className="w-full h-[auto] mt-[4rem]">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[4.5rem] special-offer">
               <span className="text-gray-800">Special</span>{" "}
@@ -333,8 +306,36 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        <div className="w-full h-[auto] my-11">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
+              <span className="text-gray-800">Events &</span>{" "}
+              <span className="text-[#ffae00]">Blogs</span>
+            </h1>
+            <p className="text-center my-2 text-lg font-[400] special-offer-para text-gray-700 px-4 md:px-0">
+              Escape to Paradise: Unwind in Luxury at Our Exclusive Resort!
+            </p>
+          </div>
+        </div>
+        <div className="w-full h-[auto] flex justify-center mt-[3rem]">
+          {/* <div className="w-[38rem] h-auto max-h-[45rem] items-center flex flex-col gap-10 bg-gradient-to-r from-fuchsia-600 to-pink-600 p-4 rounded-lg shadow-lg m-5"> */}
+          {/* <p className="text-white text-lg font-semibold tracking-wide text-center h-auto overflow-y-auto overflow-hidden p-4 break-words"> */}
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61558992059697&tabs=timeline%2Cevents&width=365&height=480&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
+            width="365"
+            height="480"
+            className="border-none overflow-hidden p-[10px] shadow-xl bg-gradient-to-r bg-[#ffae00] rounded-2xl"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          ></iframe>
+          {/* </p> */}
+          {/* </div> */}
+        </div>
+
         {/* // Why choose us Section */}
-        <div className="w-full h-[auto] my-8">
+        <div className="w-full h-[auto] mt-[4rem]">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-center font-bold text-[3.5rem] md:text-[4.5rem]">
               <span className="text-gray-800">Why </span>
@@ -384,7 +385,7 @@ const Home = () => {
         </div>
 
         {/* Amenties and Actiity section */}
-        <div className="w-full h-[auto] my-8">
+        {/* <div className="w-full h-[auto] my-8">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-center font-bold text-[3.5rem] md:text-[4.5rem] text-gray-800">
               <span className="text-gray-800">Amenities &</span>{" "}
@@ -489,18 +490,19 @@ const Home = () => {
               </span>
             </p>
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-full p-5 flex gap-[5rem] flex-col  items-center justify-center mt-[3rem]">
+        <div className="w-full p-5 flex gap-[5rem] flex-col  items-center justify-center mt-[2.7rem]">
           <h1 className="font-bold text-[4rem]">
             <span className="text-gray-800">Reviews</span>
           </h1>
           <Feedback />
           <a
-            href="https://www.facebook.com/profile.php?id=61558992059697&sk=reviews" target="_blank"
+            href="https://www.facebook.com/profile.php?id=61558992059697&sk=reviews"
+            target="_blank"
             className="bg-blue-500 py-4 px-8 rounded-md text-white font-bold text-[1rem] hover:bg-blue-600 duration-200"
           >
-            More Reviews
+            Write & View Reviews
           </a>
         </div>
 
