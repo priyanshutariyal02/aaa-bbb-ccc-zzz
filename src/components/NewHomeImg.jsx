@@ -49,9 +49,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <p className="font-semibold text-2xl italic lowercase">
-                Loving the cozy vibes in this room with tables and chairs,
-                perfect for a coffee break or a meal with friends!
+              <p className="font-semibold text-3xl text-center italic lowercase">
+                "Loving the cozy vibes in this room with tables and chairs,
+                perfect for a coffee break or a meal with friends!"
               </p>
             </div>
 
@@ -73,10 +73,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <p className="font-semibold text-lg italic lowercase">
-                Just woke up to this breathtaking view of the mountain range
-                from the forest. Feeling so grateful to be surrounded by such
-                natural beauty.
+              <p className="font-semibold text-3xl italic lowercase">
+                "Just woke up to this breathtaking view of the mountain range
+                from the forest."
               </p>
             </div>
 
@@ -98,9 +97,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <p className="font-semibold text-lg italic lowercase">
-                When you find your tribe, you just have to snap a pic. Smiling
-                faces and good vibes all around.
+              <p className="font-semibold text-3xl italic lowercase">
+                "When you find your tribe, you just have to snap a pic. Smiling
+                faces and good vibes all around."
               </p>
             </div>
 
@@ -122,9 +121,9 @@ const NewHomeImg = () => {
               text="First slide"
             />
             <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center text-white font-bold text-[7rem]  text-left uppercase home-heading">
-              <p className="font-semibold text-lg italic lowercase">
-                Smiling faces, stylish clothing, and endless laughter Feeling so
-                lucky to have been a part of such a fun day.
+              <p className="font-semibold text-3xl italic lowercase">
+                "Smiling faces, stylish clothing, and endless laughter Feeling so
+                lucky to have been a part of such a fun day."
               </p>
             </div>
 
