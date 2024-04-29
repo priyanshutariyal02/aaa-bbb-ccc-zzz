@@ -48,7 +48,7 @@ const PlacesToVisit = () => {
                 alt="location"
                 className="w-[40px] rounded-lg shadow-md bg-slate-300/20 p-1"
               />
-              <a href="https://maps.app.goo.gl/JxszDckZGNrFGtWQ6">
+              <a href="https://maps.app.goo.gl/J31fi44j28XD2j5PA">
                 <p>
                   <span className="bg-[#ffae00] text-white p-2 rounded-lg font-semibold">
                     Location
