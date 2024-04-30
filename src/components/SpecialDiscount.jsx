@@ -64,13 +64,16 @@ const SpecialDiscount = () => {
               <p className="text-[1.5rem] font-bold tracking-wide">
                 ₹17,997{" "}
                 <span className="line-through text-lg font-normal text-gray-500">
-                  ₹24,000
+                  ₹20,997
                 </span>
               </p>
               <p className="text-yellow-300 border-2 font-semibold border-yellow-300 px-2 rounded-xl">
                 offer
               </p>
             </div>
+            <p className="text-md tracking-wide text-gray-500 font-semibold">
+              (₹6,999/room)
+            </p>
             <p className="text-md tracking-wide text-gray-600 ">
               (+Exclusive of all taxes)
             </p>
@@ -127,6 +130,9 @@ const SpecialDiscount = () => {
                 offer
               </p>
             </div>
+            <p className="text-md tracking-wide text-gray-600 font-semibold ">
+              (₹7,599/room)
+            </p>
             <p className="text-md tracking-wide text-gray-600 ">
               (+Exclusive of all taxes)
             </p>
@@ -142,7 +148,7 @@ const SpecialDiscount = () => {
                 Breakfast
               </p>
               <p className="bg-slate-100 shadow-lg rounded-lg py-2">
-                <img src={night} alt="bedroom" className="w-[3rem] p-1" />5
+                <img src={night} alt="bedroom" className="w-[3rem] p-1" />3
                 Night
               </p>
             </div>

@@ -61,8 +61,6 @@ const Gallery = () => {
               src={video1}
               controls
               className="transition duration-300 ease-in-out"
-              autoPlay
-              loop
             />
           </div>
           <div className="w-[20rem] relative overflow-hidden">
@@ -70,8 +68,6 @@ const Gallery = () => {
               src={video2}
               controls
               className="transition duration-300 ease-in-out"
-              autoPlay
-              loop
             />
           </div>
           <div className="w-[20rem] relative overflow-hidden">
