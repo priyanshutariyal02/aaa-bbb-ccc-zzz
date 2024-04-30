@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import useAlert from "../hooks/useAlert";
 import Alert from "../components/Alert.jsx";
 
-const Booking = () => {
+const BookingCard2 = () => {
   const formRef = useRef(null);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -60,7 +60,7 @@ const Booking = () => {
           from_adults: form.adults,
           from_children: form.children,
           form_days: days,
-          // form_amount: t_room_price,
+          form_amount: t_room_price,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
@@ -117,14 +117,15 @@ const Booking = () => {
 
   const days = calculateNumberOfDays(form.checkin, form.checkout);
 
-  // const discount = 1000 * days;
-  // const one_room = 8000;
-  // let t_room_price = 0;
-  // if (days >= 3) {
-  //   t_room_price = one_room * days * form.rooms - discount;
-  // } else {
-  //   t_room_price = one_room * days * form.rooms;
-  // }
+  const discount = 1000 * days;
+  const one_room = 7599;
+  let t_room_price = 0;
+
+  if (days >= 3) {
+    t_room_price = one_room * days * form.rooms - discount;
+  } else {
+    t_room_price = one_room * days * form.rooms;
+  }
   return (
     <div className="w-full min-h-[100vh] pt-[10rem] ">
       <div className="w-full h-full min-h-[100vh] flex justify-center booking-page">
@@ -134,7 +135,10 @@ const Booking = () => {
           onSubmit={handleSubmit}
           className="w-[60%] pb-[3rem] min-h-[100vh] bg-white mb-[3rem] shadow-xl"
         >
-          <h1 className="text-center text-[4rem] py-5 font-bold">Booking</h1>
+          <h1 className="text-center text-[4rem] py-5 font-bold">
+            <span className="text-gray-800">Booking</span>{" "}
+            <span className="text-[#ffae00]">Card 2</span>
+          </h1>
           <div className="w-full flex flex-col gap-10 justify-center items-center p-10">
             <div className="grid grid-cols-2 gap-8 justify-center book-inp">
               <div>
@@ -217,9 +221,9 @@ const Booking = () => {
               <div>
                 <p className="text-black p-2 font-bold">
                   Rooms <span className="text-red-500">*</span>{" "}
-                  {/* <span className="text-gray-700 font-normal tracking-wide">
-                    (₹8000+taxes/night)
-                  </span> */}
+                  <span className="text-gray-700 font-normal tracking-wide">
+                    (₹7,599+taxes/night)
+                  </span>
                 </p>
                 <input
                   name="rooms"
@@ -284,21 +288,21 @@ const Booking = () => {
                   <tr className="border-b border-black">
                     <th className="p-2 text-left">No. of night:</th>
                     <td className="p-2">
-                      {days <= 0 ? (
+                      {days > 0 ? (
+                        days
+                      ) : (
                         <p className="text-[red] font-semibold">
                           Enter valid dates
                         </p>
-                      ) : (
-                        days
                       )}
                     </td>
                   </tr>
-                  {/* <tr className="text-4xl tracking-wide">
+                  <tr className="text-4xl tracking-wide">
                     <th className="p-2 text-left font-semibold">Total:</th>
                     <td className="p-2 font-semibold">
                       ₹{days && t_room_price > 0 ? t_room_price : "0"}
                     </td>
-                  </tr> */}
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -328,4 +332,4 @@ const Booking = () => {
   );
 };
 
-export default Booking;
+export default BookingCard2;
