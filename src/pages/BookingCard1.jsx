@@ -288,12 +288,12 @@ const BookingCard1 = () => {
                   <tr className="border-b border-black">
                     <th className="p-2 text-left">No. of night:</th>
                     <td className="p-2">
-                      {days > 0 ? (
-                        days
-                      ) : (
+                      {days <= 0 ? (
                         <p className="text-[red] font-semibold">
                           Enter valid dates
                         </p>
+                      ) : (
+                        days
                       )}
                     </td>
                   </tr>
