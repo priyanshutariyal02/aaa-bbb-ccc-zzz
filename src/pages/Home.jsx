@@ -296,7 +296,7 @@ const Home = () => {
           </div>
         </div> */}
 
-        <div className="w-full p-5 flex gap-[5rem] flex-col  items-center justify-center mt-[2.7rem]">
+        <div className="w-full p-3 flex gap-[5rem] flex-col  items-center justify-center mt-[2.7rem]">
           <h1 className="font-bold text-[4rem]">
             <span className="text-gray-800">Reviews</span>
           </h1>
@@ -317,7 +317,7 @@ const Home = () => {
             <span className="text-gray-800">Social</span>{" "}
             <span className="text-[#ffae00]">Links</span>
           </h1>
-          <div className="w-full p-5 flex gap-[10rem]  items-center justify-center mt-[3rem] social-icons">
+          <div className="w-full p-3 flex gap-[10rem]  items-center justify-center mt-[3rem] social-icons">
             <a target="_blank" href="https://wa.me/917906075750">
               <img
                 src={whatsapp}

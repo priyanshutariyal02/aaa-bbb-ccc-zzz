@@ -300,7 +300,10 @@ const BookingCard1 = () => {
                   <tr className="text-4xl tracking-wide">
                     <th className="p-2 text-left font-semibold">Total:</th>
                     <td className="p-2 font-semibold">
-                      ₹{days && t_room_price > 0 ? t_room_price : "0"}
+                      ₹{days && t_room_price ? t_room_price : "0"}{" "}
+                      {t_room_price > 0 ? (
+                        <span className="text-lg text-red-500">(+Exclusive of all taxes)</span>
+                      ) : undefined}
                     </td>
                   </tr>
                 </tbody>
